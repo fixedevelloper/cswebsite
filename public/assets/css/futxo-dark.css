@@ -1,0 +1,151 @@
+body,
+body.boxed-wrapper .page-wrapper {
+    background-color: #040405;
+}
+
+.main-menu .main-menu__list>li>a,
+.stricky-header .main-menu__list>li>a {
+    color: #beb5b5;
+}
+
+.main-menu__btn:hover {
+    background-color: var(--futxo-white);
+    color: var(--futxo-base);
+}
+
+.main-menu__nav-sidebar-icon .navSidebar-button:hover {
+    color: var(--futxo-white);
+}
+
+.stricky-header.main-menu {
+    background-color: #040405;
+}
+
+.thm-btn:hover {
+    color: var(--futxo-base);
+}
+
+.thm-btn span {
+    background-color: var(--futxo-white);
+}
+
+.feature-one__title a,
+.section-title__title,
+.about-one__points li p,
+.about-one__contact .content h4 a,
+.services-one__title a,
+.team-one__name a,
+.faq-one__points li .icon span,
+.faq-one__right .faq-one-accrodion .accrodion-title h4::before,
+.testimonial-one__client-info h3,
+.blog-one__title a {
+    color: var(--futxo-white);
+}
+
+.about-one__text,
+.about-one__contact .content p,
+.services-one__text,
+.team-one__sub-title,
+.faq-one__text,
+.faq-one__points li .text p,
+.faq-one__right .faq-one-accrodion .accrodion-content p,
+.testimonial-one__client-info p,
+.blog-one__meta li a {
+    color: #beb5b5;
+}
+
+
+.blog-one__content,
+.main-header__top-inner,
+.services-one__content,
+.team-one__content-inner,
+.testimonial-one__single,
+.testimonial-one__single-top {
+    background-color: #1c1b1f;
+}
+
+.feature-one__single {
+    background-color: #000000;
+}
+
+.feature-one__shape-1 {
+    opacity: .30;
+}
+
+.about-one__img-3 {
+    opacity: .50;
+    background-color: #090909;
+}
+
+.about-one__img-3 img {
+    mix-blend-mode: overlay;
+}
+
+.services-one__single::before {
+    display: none;
+}
+
+.services-one__arrow a::before {
+    background-color: var(--futxo-white);
+}
+
+.services-one__arrow a:hover {
+    color: var(--futxo-base);
+}
+
+.services-one__shape-1 {
+    opacity: .03;
+}
+
+.team-one__bg {
+    opacity: .02;
+}
+
+.team-one__shape-1 {
+    opacity: .02;
+}
+
+.team-one__share-btn>a,
+.team-one__social>a {
+    background-color: #040405;
+    color: var(--futxo-white);
+}
+
+.faq-one__right .faq-one-accrodion .accrodion {
+    border: 2px solid rgba(var(--futxo-white-rgb), .10);
+}
+
+.faq-one__right .faq-one-accrodion .accrodion-title h4 {
+    color: var(--futxo-white);
+}
+
+.testimonial-one__bg {
+    opacity: 0.02;
+}
+
+.testimonial-one__shape-2 {
+    opacity: .05;
+}
+
+.testimonial-one__shape-1 {
+    opacity: .02;
+}
+
+.testimonial-one__ratting span {
+    color: var(--futxo-white);
+}
+
+.blog-one__shape-1 {
+    opacity: .03;
+}
+
+
+
+
+
+
+
+
+
+
+/*  */
