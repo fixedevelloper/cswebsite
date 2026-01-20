@@ -24,7 +24,7 @@ export const revalidate = 60;
 
 const Homepage = async () => {
     // ✅ fetch côté serveur
-    const res = await fetch("http://127.0.0.1:8000/api/posts/latest?limit=6", { cache: "no-store" });
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts?limit=6`, { cache: "no-store" });
 
     if (!res.ok) {
         console.error("Erreur API:", res.status, await res.text());
