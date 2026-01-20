@@ -75,10 +75,10 @@ export const Process = ({ extraClass = "" }) => {
                     <div className="process-one__content">
                       <div
                           className="process-one__shape-1"
-                          style={{
+                      /*    style={{
                             backgroundImage:
                                 "url(assets/images/shapes/process-one-shape-1.png)",
-                          }}
+                          }}*/
                       />
                       <h4 className="process-one__title" itemProp="name">
                         {step.title}

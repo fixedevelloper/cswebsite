@@ -26,7 +26,7 @@ export async function generateMetadata({ params }) {
 
   const siteUrl = "https://creativ-solutions.com";
   const image =
-      post.image_url || `${siteUrl}/assets/images/blog/default.jpg`;
+      post.image_url;
 
   return {
     title: `${post.title} | Creativ Solutions`,
@@ -102,7 +102,7 @@ const BlogDetailPage = async ({ params }) => {
 
                   <div className="blog-details__img-1">
                     <Image
-                        src={process.env.NEXT_PUBLIC_API_URL+post.image_url}
+                        src={post.image_url}
                         alt={post?.title}
                         width={770}
                         height={424}
@@ -255,7 +255,7 @@ const BlogDetailPage = async ({ params }) => {
                           <li key={p.id}>
                             <div className="sidebar__post-image">
                               <img
-                                  src={p.image_url || "/assets/images/blog/default.jpg"}
+                                  src={p.thumb_url || "/assets/images/blog/default.jpg"}
                                   alt={p.title}
                               />
                             </div>

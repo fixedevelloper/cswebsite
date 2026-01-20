@@ -25,7 +25,7 @@ const HeaderMenu = ({ singlePage }) => {
                 <div className="main-menu-two__logo">
                   <Link href="/">
                     <Image
-                        src="/assets/images/resources/logo-1.png"
+                        src="/assets/images/resources/logo.png"
                         alt="Creativ Solutions - Agence digitale"
                         width={115}
                         height={60}
@@ -92,7 +92,7 @@ const HeaderMenu = ({ singlePage }) => {
 
                     <div className="main-menu-two__right">
                       <div className="main-menu-two__btn-box">
-                        <Link href="/contact" className="main-menu-two__btn">
+                        <Link href="/demandez-devis" className="main-menu-two__btn">
                           Obtenir une solution
                         </Link>
                       </div>
@@ -249,258 +249,6 @@ const Menu = ({ singlePage }) => {
 
   );
 };
-const Menu1 = ({ singlePage }) => {
-  const menus = [
-    {
-      label: "About",
-      href: "#about",
-    },
-    {
-      label: "Services",
-      href: "#services",
-    },
-    {
-      label: "Portfolio",
-      href: "#portfolio",
-    },
-    {
-      label: "Team",
-      href: "#team",
-    },
-    {
-      label: "Blog",
-      href: "#blog",
-    },
-  ];
-  return (
-      <ul className="main-menu__list">
-        <li className="dropdown megamenu">
-          <Link href="/">Home </Link>
-          <ul>
-            <li>
-              <section className="home-showcase">
-                <div className="container">
-                  <div className="home-showcase__inner">
-                    <div className="row">
-                      <div className="col-lg-3">
-                        <div className="home-showcase__item">
-                          <div className="home-showcase__image">
-                            <img
-                                src="assets/images/home-showcase/home-showcase-1-1.jpg"
-                                alt=""
-                            />
-                            <div className="home-showcase__buttons">
-                              <Link
-                                  href="/"
-                                  className="thm-btn home-showcase__buttons__item"
-                              >
-                                Multi Page <span /> <span />
-                                <span /> <span />
-                                <span />{" "}
-                              </Link>
-                              <Link
-                                  href="/index-one-page"
-                                  className="thm-btn home-showcase__buttons__item"
-                              >
-                                One Page <span /> <span />
-                                <span /> <span />
-                                <span />{" "}
-                              </Link>
-                            </div>
-                          </div>
-                          <h3 className="home-showcase__title">Home Page 01</h3>
-                        </div>
-                      </div>
-                      <div className="col-lg-3">
-                        <div className="home-showcase__item">
-                          <div className="home-showcase__image">
-                            <img
-                                src="assets/images/home-showcase/home-showcase-1-2.jpg"
-                                alt=""
-                            />
-                            <div className="home-showcase__buttons">
-                              <Link
-                                  href="/index2"
-                                  className="thm-btn home-showcase__buttons__item"
-                              >
-                                Multi Page <span /> <span />
-                                <span /> <span />
-                                <span />{" "}
-                              </Link>
-                              <Link
-                                  href="/index2-one-page"
-                                  className="thm-btn home-showcase__buttons__item"
-                              >
-                                One Page <span /> <span />
-                                <span /> <span />
-                                <span />{" "}
-                              </Link>
-                            </div>
-                          </div>
-                          <h3 className="home-showcase__title">Home Page 02</h3>
-                        </div>
-                      </div>
-                      <div className="col-lg-3">
-                        <div className="home-showcase__item">
-                          <div className="home-showcase__image">
-                            <img
-                                src="assets/images/home-showcase/home-showcase-1-3.jpg"
-                                alt=""
-                            />
-                            <div className="home-showcase__buttons">
-                              <Link
-                                  href="/index3"
-                                  className="thm-btn home-showcase__buttons__item"
-                              >
-                                Multi Page <span /> <span />
-                                <span /> <span />
-                                <span />{" "}
-                              </Link>
-                              <Link
-                                  href="/index3-one-page"
-                                  className="thm-btn home-showcase__buttons__item"
-                              >
-                                One Page <span /> <span />
-                                <span /> <span />
-                                <span />{" "}
-                              </Link>
-                            </div>
-                          </div>
-                          <h3 className="home-showcase__title">Home Page 03</h3>
-                        </div>
-                      </div>
-                      <div className="col-lg-3">
-                        <div className="home-showcase__item">
-                          <div className="home-showcase__image">
-                            <img
-                                src="assets/images/home-showcase/home-showcase-1-4.jpg"
-                                alt=""
-                            />
-                            <div className="home-showcase__buttons">
-                              <Link
-                                  href="/index-dark"
-                                  className="thm-btn home-showcase__buttons__item"
-                              >
-                                View Page <span /> <span />
-                                <span /> <span />
-                                <span />{" "}
-                              </Link>
-                            </div>
-                          </div>
-                          <h3 className="home-showcase__title">Home Page 04</h3>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </li>
-          </ul>
-        </li>
-        {singlePage ? (
-            menus.map((menu) => (
-                <li key={menu.label}>
-                  <Link href={menu.href}>{menu.label}</Link>
-                </li>
-            ))
-        ) : (
-            <Fragment>
-              <li>
-                <Link href="/about">About</Link>
-              </li>
-              <li className="dropdown">
-                <Link href="#">Services</Link>
-                <ul className="sub-menu">
-                  <li>
-                    <Link href="/services">Services</Link>
-                  </li>
-                  <li>
-                    <Link href="/services-carousel">Services Carousel</Link>
-                  </li>
-                  <li>
-                    <Link href="/ui-ux-designing">UI/UX Designing</Link>
-                  </li>
-                  <li>
-                    <Link href="/website-developement">Website Developement</Link>
-                  </li>
-                  <li>
-                    <Link href="/marketing-strategy">Marketing Strategy</Link>
-                  </li>
-                  <li>
-                    <Link href="/digital-products">Digital Products</Link>
-                  </li>
-                  <li>
-                    <Link href="/modern-designing">Modern Designing</Link>
-                  </li>
-                </ul>
-              </li>
-              <li className="dropdown">
-                <Link href="#">Pages</Link>
-                <ul className="sub-menu">
-                  <li>
-                    <Link href="/team">Our Team</Link>
-                  </li>
-                  <li>
-                    <Link href="/team-carousel">Team Carousel</Link>
-                  </li>
-                  <li>
-                    <Link href="/team-details">Team Details</Link>
-                  </li>
-                  <li>
-                    <Link href="/portfolio">Portfolio</Link>
-                  </li>
-                  <li>
-                    <Link href="/portfolio-carousel">Portfolio Carousel</Link>
-                  </li>
-                  <li>
-                    <Link href="/portfolio-details">Portfolio Details</Link>
-                  </li>
-                  <li>
-                    <Link href="/case-single">Case Single</Link>
-                  </li>
-                  <li>
-                    <Link href="/testimonials">Testimonals</Link>
-                  </li>
-                  <li>
-                    <Link href="/testimonials-carousel">Testimonals Carousel</Link>
-                  </li>
-                  <li>
-                    <Link href="/gallery">Gallery</Link>
-                  </li>
-                  <li>
-                    <Link href="/faq">Faq</Link>
-                  </li>
-                  <li>
-                    <Link href="/404">404 Error</Link>
-                  </li>
-                </ul>
-              </li>
-              <li className="dropdown">
-                <Link href="#">Blog</Link>
-                <ul className="sub-menu">
-                  <li>
-                    <Link href="/blog-1">Blog One</Link>
-                  </li>
-                  <li>
-                    <Link href="/blog-2">Blog Two</Link>
-                  </li>
-                  <li>
-                    <Link href="/blog-carousel">Blog Carousel</Link>
-                  </li>
-                  <li>
-                    <Link href="/blog-details">Blog Details</Link>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <Link href="/contact">Contact</Link>
-              </li>
-            </Fragment>
-        )}
-      </ul>
-  );
-};
-
 
 const MobileMenu = ({ mobileMenuToggle, setMobileMenuToggle }) => {
   const [activeMenu, setActiveMenu] = useState("");
@@ -530,7 +278,7 @@ const MobileMenu = ({ mobileMenuToggle, setMobileMenuToggle }) => {
 
             <Link href="/" title="Accueil - Creativ Solutions">
               <Image
-                  src="/assets/images/resources/logo-1.png"
+                  src="/assets/images/resources/logo-black.png"
                   alt="Creativ Solutions - Agence digitale"
                   width={115}
                   height={60}
@@ -547,12 +295,44 @@ const MobileMenu = ({ mobileMenuToggle, setMobileMenuToggle }) => {
                   Accueil
                 </Link>
               </li>
-
-              <li>
-                <Link href="/about" title="À propos de Creativ Solutions">
-                  À propos
+              <li className="dropdown">
+                <Link href="#">
+                  Agence
+                  <button
+                      aria-label="dropdown toggler"
+                      onClick={() => toggleMenu("agences")}
+                      className={`${
+                          activeMenu === "agences" ? "expanded" : ""
+                      }`}
+                  >
+                    <i className="fa fa-angle-down" />
+                  </button>
                 </Link>
+                <ul className="sub-menu" style={activeStyle("agences")}>
+                  <li>
+                    <Link href="/about" title="À propos de Creativ Solutions">
+                      À propos
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                        href="/nos-realisations"
+                        title="Nos réalisations en développement web et digital"
+                    >
+                      Nos réalisations
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                        href="/nos-solutions"
+                        title="Nos solutions digitales et technologiques"
+                    >
+                      Nos solutions
+                    </Link>
+                  </li>
+                </ul>
               </li>
+
               <li className="dropdown">
                 <Link href="#">
                   Services
@@ -653,356 +433,5 @@ const MobileMenu = ({ mobileMenuToggle, setMobileMenuToggle }) => {
       </div>
   );
 };
-const MobileMenu1 = ({ mobileMenuToggle, setMobileMenuToggle, singlePage }) => {
-  const [activeMenu, setActiveMenu] = useState("");
-  const [multiMenu, setMultiMenu] = useState("");
-  const activeMenuSet = (value) =>
-          setActiveMenu(activeMenu === value ? "" : value),
-      activeLi = (value) =>
-          value === activeMenu ? { display: "block" } : { display: "none" };
-
-  const menus = [
-    {
-      label: "About",
-      href: "#about",
-    },
-    {
-      label: "Services",
-      href: "#services",
-    },
-    {
-      label: "Portfolio",
-      href: "#portfolio",
-    },
-    {
-      label: "Team",
-      href: "#team",
-    },
-    {
-      label: "Blog",
-      href: "#blog",
-    },
-  ];
-
-  return (
-      <div
-          className={`mobile-nav__wrapper ${mobileMenuToggle ? "expanded" : ""}`}
-      >
-        <div
-            className="mobile-nav__overlay mobile-nav__toggler"
-            onClick={() => setMobileMenuToggle(false)}
-        />
-        <div className="mobile-nav__content">
-        <span
-            className="mobile-nav__close mobile-nav__toggler"
-            onClick={() => setMobileMenuToggle(false)}
-        >
-          <i className="fa fa-times" />
-        </span>
-          <div className="logo-box">
-            <Link href="/" aria-label="logo image">
-              <img src="assets/images/resources/logo-1.png" width={115} alt="" />
-            </Link>
-          </div>
-          <div className="mobile-nav__container">
-            <ul className="main-menu__list">
-              <li className="dropdown current megamenu">
-                <Link href="/">
-                  Home{" "}
-                  <button
-                      aria-label="dropdown toggler"
-                      onClick={() => activeMenuSet("home")}
-                      className={`${activeMenu === "home" ? "expanded" : ""}`}
-                  >
-                    <i className="fa fa-angle-down" />
-                  </button>
-                </Link>
-                <ul style={activeLi("home")}>
-                  <li>
-                    <section className="home-showcase">
-                      <div className="container">
-                        <div className="home-showcase__inner">
-                          <div className="row">
-                            <div className="col-lg-3">
-                              <div className="home-showcase__item">
-                                <div className="home-showcase__image">
-                                  <img
-                                      src="assets/images/home-showcase/home-showcase-1-1.jpg"
-                                      alt=""
-                                  />
-                                  <div className="home-showcase__buttons">
-                                    <Link
-                                        href="/"
-                                        className="thm-btn home-showcase__buttons__item"
-                                    >
-                                      Multi Page <span /> <span />
-                                      <span /> <span />
-                                      <span />{" "}
-                                    </Link>
-                                    <Link
-                                        href="/index-one-page"
-                                        className="thm-btn home-showcase__buttons__item"
-                                    >
-                                      One Page <span /> <span />
-                                      <span /> <span />
-                                      <span />{" "}
-                                    </Link>
-                                  </div>
-                                </div>
-                                <h3 className="home-showcase__title">
-                                  Home Page 01
-                                </h3>
-                              </div>
-                            </div>
-                            <div className="col-lg-3">
-                              <div className="home-showcase__item">
-                                <div className="home-showcase__image">
-                                  <img
-                                      src="assets/images/home-showcase/home-showcase-1-2.jpg"
-                                      alt=""
-                                  />
-                                  <div className="home-showcase__buttons">
-                                    <Link
-                                        href="/index2"
-                                        className="thm-btn home-showcase__buttons__item"
-                                    >
-                                      Multi Page <span /> <span />
-                                      <span /> <span />
-                                      <span />{" "}
-                                    </Link>
-                                    <Link
-                                        href="/index2-one-page"
-                                        className="thm-btn home-showcase__buttons__item"
-                                    >
-                                      One Page <span /> <span />
-                                      <span /> <span />
-                                      <span />{" "}
-                                    </Link>
-                                  </div>
-                                </div>
-                                <h3 className="home-showcase__title">
-                                  Home Page 02
-                                </h3>
-                              </div>
-                            </div>
-                            <div className="col-lg-3">
-                              <div className="home-showcase__item">
-                                <div className="home-showcase__image">
-                                  <img
-                                      src="assets/images/home-showcase/home-showcase-1-3.jpg"
-                                      alt=""
-                                  />
-                                  <div className="home-showcase__buttons">
-                                    <Link
-                                        href="/index3"
-                                        className="thm-btn home-showcase__buttons__item"
-                                    >
-                                      Multi Page <span /> <span />
-                                      <span /> <span />
-                                      <span />{" "}
-                                    </Link>
-                                    <Link
-                                        href="/index3-one-page"
-                                        className="thm-btn home-showcase__buttons__item"
-                                    >
-                                      One Page <span /> <span />
-                                      <span /> <span />
-                                      <span />{" "}
-                                    </Link>
-                                  </div>
-                                </div>
-                                <h3 className="home-showcase__title">
-                                  Home Page 03
-                                </h3>
-                              </div>
-                            </div>
-                            <div className="col-lg-3">
-                              <div className="home-showcase__item">
-                                <div className="home-showcase__image">
-                                  <img
-                                      src="assets/images/home-showcase/home-showcase-1-4.jpg"
-                                      alt=""
-                                  />
-                                  <div className="home-showcase__buttons">
-                                    <Link
-                                        href="/index-dark"
-                                        className="thm-btn home-showcase__buttons__item"
-                                    >
-                                      View Page <span /> <span />
-                                      <span /> <span />
-                                      <span />{" "}
-                                    </Link>
-                                  </div>
-                                </div>
-                                <h3 className="home-showcase__title">
-                                  Home Page 04
-                                </h3>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </section>
-                  </li>
-                </ul>
-              </li>
-              {singlePage ? (
-                  menus.map((menu) => (
-                      <li key={menu.label}>
-                        <Link href={menu.href}>{menu.label}</Link>
-                      </li>
-                  ))
-              ) : (
-                  <Fragment>
-                    <li>
-                      <Link href="/about">About</Link>
-                    </li>
-                    <li className="dropdown">
-                      <Link href="#">
-                        Services
-                        <button
-                            aria-label="dropdown toggler"
-                            onClick={() => activeMenuSet("services")}
-                            className={`${
-                                activeMenu === "services" ? "expanded" : ""
-                            }`}
-                        >
-                          <i className="fa fa-angle-down" />
-                        </button>
-                      </Link>
-                      <ul className="sub-menu" style={activeLi("services")}>
-                        <li>
-                          <Link href="/services">Services</Link>
-                        </li>
-                        <li>
-                          <Link href="/services-carousel">Services Carousel</Link>
-                        </li>
-                        <li>
-                          <Link href="/ui-ux-designing">UI/UX Designing</Link>
-                        </li>
-                        <li>
-                          <Link href="/website-developement">
-                            Website Developement
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/marketing-strategy">Marketing Strategy</Link>
-                        </li>
-                        <li>
-                          <Link href="/digital-products">Digital Products</Link>
-                        </li>
-                        <li>
-                          <Link href="/modern-designing">Modern Designing</Link>
-                        </li>
-                      </ul>
-                    </li>
-                    <li className="dropdown">
-                      <Link href="#">
-                        Pages
-                        <button
-                            aria-label="dropdown toggler"
-                            onClick={() => activeMenuSet("pages")}
-                            className={`${activeMenu === "pages" ? "expanded" : ""}`}
-                        >
-                          <i className="fa fa-angle-down" />
-                        </button>
-                      </Link>
-                      <ul className="sub-menu" style={activeLi("pages")}>
-                        <li>
-                          <Link href="/team">Our Team</Link>
-                        </li>
-                        <li>
-                          <Link href="/team-carousel">Team Carousel</Link>
-                        </li>
-                        <li>
-                          <Link href="/team-details">Team Details</Link>
-                        </li>
-                        <li>
-                          <Link href="/portfolio">Portfolio</Link>
-                        </li>
-                        <li>
-                          <Link href="/portfolio-carousel">Portfolio Carousel</Link>
-                        </li>
-                        <li>
-                          <Link href="/portfolio-details">Portfolio Details</Link>
-                        </li>
-                        <li>
-                          <Link href="/case-single">Case Single</Link>
-                        </li>
-                        <li>
-                          <Link href="/testimonials">Testimonals</Link>
-                        </li>
-                        <li>
-                          <Link href="/testimonials-carousel">
-                            Testimonals Carousel
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="/gallery">Gallery</Link>
-                        </li>
-                        <li>
-                          <Link href="/faq">Faq</Link>
-                        </li>
-                        <li>
-                          <Link href="/404">404 Error</Link>
-                        </li>
-                      </ul>
-                    </li>
-                    <li className="dropdown">
-                      <Link href="#">
-                        Blog
-                        <button
-                            aria-label="dropdown toggler"
-                            onClick={() => activeMenuSet("blog")}
-                            className={`${activeMenu === "blog" ? "expanded" : ""}`}
-                        >
-                          <i className="fa fa-angle-down" />
-                        </button>
-                      </Link>
-                      <ul className="sub-menu" style={activeLi("blog")}>
-                        <li>
-                          <Link href="/blog-1">Blog One</Link>
-                        </li>
-                        <li>
-                          <Link href="/blog-2">Blog Two</Link>
-                        </li>
-                        <li>
-                          <Link href="/blog-carousel">Blog Carousel</Link>
-                        </li>
-                        <li>
-                          <Link href="/blog-details">Blog Details</Link>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <Link href="/contact">Contact</Link>
-                    </li>
-                  </Fragment>
-              )}
-            </ul>
-          </div>
-          <ul className="mobile-nav__contact list-unstyled">
-            <li>
-              <i className="fa fa-envelope" />
-              <a href="mailto:needhelp@packageName__.com">needhelp@Futxo.com</a>
-            </li>
-            <li>
-              <i className="fa fa-phone-alt" />
-              <a href="tel:666-888-0000">666 888 0000</a>
-            </li>
-          </ul>
-          <div className="mobile-nav__top">
-            <div className="mobile-nav__social">
-              <a href="#" className="fab fa-twitter" />
-              <a href="#" className="fab fa-facebook-square" />
-              <a href="#" className="fab fa-pinterest-p" />
-              <a href="#" className="fab fa-instagram" />
-            </div>
-          </div>
-        </div>
-      </div>
-  );
-};
-
 
 export default Header;

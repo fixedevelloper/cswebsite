@@ -11018,6 +11018,19 @@ ul {
   margin-bottom: 0px;
 }
 
+.comment-form__input-box select {
+  height: 60px;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #dcdfe2;
+  border-radius: 2px;
+  padding-left: 20px;
+  padding-right: 20px;
+  outline: none;
+  font-size: 12px;
+  color: var(--futxo-gray);
+  display: block;
+}
 .comment-form__btn {
   border: none;
   padding: 16px 43px 17px;

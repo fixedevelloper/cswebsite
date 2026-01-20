@@ -41,7 +41,7 @@ const Footer1 = () => {
                   <div className="footer-widget__logo">
                     <Link href="/">
                       <Image
-                          src="/assets/images/resources/logo-1.png"
+                          src="/assets/images/resources/logo-black.png"
                           alt="Creativ Solutions - Agence digitale"
                           width={115}
                           height={60}

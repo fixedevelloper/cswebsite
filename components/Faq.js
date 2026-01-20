@@ -77,19 +77,19 @@ export const Faq2 = () => {
                   <li>
                     <div className="faq-two__img">
                       <img
-                          src="assets/images/resources/faq-two-img-1-1.jpg"
+                          src="assets/images/resources/lancement.avif"
                           alt="Exemple de projet CreativSolutions au Cameroun"
                       />
                     </div>
                   </li>
-                  <li>
+               {/*   <li>
                     <div className="faq-two__img">
                       <img
                           src="assets/images/resources/faq-two-img-1-2.jpg"
                           alt="Equipe CreativSolutions au travail sur un projet digital"
                       />
                     </div>
-                  </li>
+                  </li>*/}
                 </ul>
               </div>
             </div>

@@ -1,6 +1,7 @@
 import Breadcrumb from "@/components/Breadcrumb";
 import FutxoLayout from "@/Layout/FutxoLayout";
-
+import React  from "react";
+import ContactForm from "../../components/contactForm";
 export const metadata = {
   title: "Contactez CreativSolutions - Agence Web au Cameroun",
   description:
@@ -9,7 +10,11 @@ export const metadata = {
       "contact CreativSolutions, agence web Cameroun, développement site web, marketing digital Afrique",
 };
 
+
+
 const ContactPage = () => {
+
+
   return (
       <FutxoLayout>
         {/* Fil d'Ariane */}
@@ -19,7 +24,7 @@ const ContactPage = () => {
         <section className="google-map">
           <iframe
               title="Carte CreativSolutions - Localisation Cameroun"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4562.753041141002!2d-118.80123790098536!3d34.152323469614075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82469c2162619%3A0xba03efb7998eef6d!2sCostco+Wholesale!5e0!3m2!1sbn!2sbd!4v1562518641290!5m2!1sbn!2sbd"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7959.153835203109!2d9.749797494974803!3d4.106139833470476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10610e6f37f5cea3%3A0x6892441e45529b2a!2zQmFuZ3XDqSwgRG91YWxh!5e0!3m2!1sfr!2scm!4v1768926004286!5m2!1sfr!2scm"
               className="google-map__one"
               allowFullScreen
               loading="lazy"
@@ -42,9 +47,9 @@ const ContactPage = () => {
                       <div className="content">
                         <h3>Adresse</h3>
                         <p>
-                          16 Vastu Arcade, 5ème étage
+                          Fin goudron Mbangue
                           <br />
-                          Palace Road, Douala, Cameroun
+                        Douala, Cameroun
                         </p>
                       </div>
                     </li>
@@ -54,7 +59,8 @@ const ContactPage = () => {
                       </div>
                       <div className="content">
                         <h3>Téléphone</h3>
-                        <a href="tel:+237882562584">+237 88 256 2584</a>
+                        <a href="tel:+237675066919">+237 675 066 919</a><br/>
+                        <a href="tel:+237657285050">+237 657 285 050</a>
                       </div>
                     </li>
                     <li>
@@ -75,79 +81,7 @@ const ContactPage = () => {
               {/* Colonne droite - Formulaire */}
               <div className="col-xl-8 col-lg-7">
                 <div className="contact-page__right">
-                  <form
-                      action="/api/contact" // utiliser API interne pour traitement sécurisé
-                      method="POST"
-                      className="contact-page__form contact-form-validated"
-                      noValidate
-                  >
-                    <div className="row">
-                      <div className="col-xl-6">
-                        <div className="contact-page__input-box">
-                          <input
-                              type="text"
-                              placeholder="Nom complet"
-                              name="name"
-                              required
-                          />
-                        </div>
-                      </div>
-                      <div className="col-xl-6">
-                        <div className="contact-page__input-box">
-                          <input
-                              type="email"
-                              placeholder="Adresse email"
-                              name="email"
-                              required
-                          />
-                        </div>
-                      </div>
-                      <div className="col-xl-6">
-                        <div className="contact-page__input-box">
-                          <input
-                              type="tel"
-                              placeholder="Téléphone"
-                              name="phone"
-                              required
-                          />
-                        </div>
-                      </div>
-                      <div className="col-xl-6">
-                        <div className="contact-page__input-box">
-                          <input
-                              type="text"
-                              placeholder="Objet du message"
-                              name="subject"
-                              required
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-xl-12">
-                        <div className="contact-page__input-box text-message-box">
-                        <textarea
-                            name="message"
-                            placeholder="Écrivez votre message"
-                            required
-                        />
-                        </div>
-                        <div className="contact-page__btn-box">
-                          <button
-                              type="submit"
-                              className="thm-btn contact-page__btn"
-                          >
-                            Envoyer le message
-                            <span />
-                            <span />
-                            <span />
-                            <span />
-                            <span />
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
+              <ContactForm />
                   <div className="result" />
                 </div>
               </div>

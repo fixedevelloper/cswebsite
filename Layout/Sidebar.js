@@ -33,7 +33,7 @@ const Sidebar = ({ toggle, setToggle }) => {
                     <div className="logo">
                       <Link href="/">
                         <Image
-                            src="/assets/images/resources/logo-1.png"
+                            src="/assets/images/resources/logo.png"
                             alt="Creativ Solutions"
                             width={180}
                             height={60}

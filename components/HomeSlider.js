@@ -16,7 +16,7 @@ export const HomeSlider2 = () => {
           <div
             className="main-slider-two__bg"
             style={{
-              backgroundImage: "url(assets/images/backgrounds/slider-2-1.jpg)",
+              backgroundImage: "url(assets/images/backgrounds/slider-2-3.jpg)",
             }}
           ></div>
           {/* /.slider-one__bg */}
@@ -42,7 +42,7 @@ export const HomeSlider2 = () => {
                 Donnez vie à<br />vos idées digitale
               </h2>
               <div className="main-slider-two__btn-box">
-                <Link href="contact" className="thm-btn main-slider-two__btn">
+                <Link href="demandez-devis" className="thm-btn main-slider-two__btn">
                   Demander un devis<span />
                   <span /> <span /> <span /> <span />{" "}
                 </Link>
@@ -91,7 +91,7 @@ export const HomeSlider2 = () => {
                 Des solutions digitales  <br /> qui performent
               </h2>
               <div className="main-slider-two__btn-box">
-                <Link href="contact" className="thm-btn main-slider-two__btn">
+                <Link href="nos-services" className="thm-btn main-slider-two__btn">
                   Découvrir nos services<span />
                   <span /> <span /> <span /> <span />{" "}
                 </Link>
@@ -140,7 +140,7 @@ export const HomeSlider2 = () => {
                 Votre partenaire  <br /> pour réussir en ligne
               </h2>
               <div className="main-slider-two__btn-box">
-                <Link href="contact" className="thm-btn main-slider-two__btn">
+                <Link href="nos-realisations" className="thm-btn main-slider-two__btn">
                   Voir nos réalisations <span />
                   <span /> <span /> <span /> <span />{" "}
                 </Link>
