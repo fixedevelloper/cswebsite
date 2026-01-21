@@ -18,23 +18,21 @@
 # Common
 --------------------------------------------------------------*/
 :root {
-  --futxo-font: "Manrope", sans-serif;
-  --futxo-font-two: "Syne", sans-serif;
+  --futxo-font: var(--font-manrope), system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --futxo-font-two: var(--font-syne), system-ui, sans-serif;
   --futxo-reey-font: "reeyregular";
   --futxo-gray: #878c8f;
   --futxo-gray-rgb: 135, 140, 143;
   --futxo-white: #ffffff;
   --futxo-white-rgb: 255, 255, 255;
-  --futxo-base: #1F7A63
-
-
-;
+  --futxo-base: #1F7A63;
   --futxo-base-rgb: 195, 0, 47;
   --futxo-black: #1c1b1f;
   --futxo-black-rgb: 28, 27, 31;
   --futxo-primary: #f5f5f5;
   --futxo-primary-rgb: 245, 245, 245;
 }
+
 
 .row {
   --bs-gutter-x: 30px;

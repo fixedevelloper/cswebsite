@@ -24,7 +24,8 @@ export const HomeSlider2 = () => {
             className="main-slider-two__shape-1 float-bob-y"
             style={{
               backgroundImage:
-                "url(assets/images/shapes/main-slider-two-shape-1.jpg)",
+                "url(assets/images/shapes/main-slider-two-shape-1.webp)",
+                backgroundColor: '#f0f0f0 '/* léger placeholder gris */
             }}
           />
           <div className="main-slider-two__shape-2 img-bounce">
