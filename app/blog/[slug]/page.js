@@ -74,7 +74,9 @@ const BlogDetailPage = async ({ params }) => {
 
   const res = await fetch(
       `${process.env.NEXT_PUBLIC_API_URL}/api/posts/${slug}?limit=5`,
-      { cache: "force-cache" }
+      {
+        next: { revalidate: 60 } // 🔥 revalidation toutes les 60s
+      }
   );
 
 
@@ -87,7 +89,6 @@ const BlogDetailPage = async ({ params }) => {
   }
 
   const { post, latest_posts, categories } = await res.json();
-  console.log(post)
   return (
       <FutxoLayout>
         <Breadcrumb title={post?.title} />
