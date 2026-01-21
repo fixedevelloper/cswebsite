@@ -7,7 +7,7 @@ const BlogPagination = () => {
     const [blogPosts, setBlogPosts] = useState([]);
     const [page, setPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
-    const limit = 3;
+    const limit = 6;
 
     const fetchPosts = async (page = 1) => {
         try {

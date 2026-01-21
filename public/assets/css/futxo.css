@@ -44,6 +44,7 @@
   --bs-gutter-y: 30px;
 }
 
+
 body {
   font-family: var(--futxo-font);
   color: var(--futxo-gray);

@@ -14,11 +14,11 @@ export const HomeSlider2 = () => {
       >
         <SwiperSlide className="item main-slider-two__slide-1">
           <div
-            className="main-slider-two__bg"
-            style={{
-              backgroundImage: "url(assets/images/backgrounds/slider-2-3.jpg)",
-            }}
-          ></div>
+    className="main-slider-two__bg"
+    style={{
+      backgroundImage: "url(assets/images/backgrounds/slider-2-3.jpg)",
+    }}
+    />
           {/* /.slider-one__bg */}
           <div
             className="main-slider-two__shape-1 float-bob-y"
@@ -49,7 +49,7 @@ export const HomeSlider2 = () => {
               </div>
               <div className="main-slider-two__video-link">
                 <a
-                  href="https://www.youtube.com/watch?v=Get7rqXYrbQ"
+                  href="https://www.youtube.com/watch?v=oUxrU6EFOlgQ"
                   className="video-popup"
                 >
                   <div className="main-slider-two__video-icon">
@@ -63,11 +63,11 @@ export const HomeSlider2 = () => {
         </SwiperSlide>
         <SwiperSlide className="item main-slider-two__slide-2">
           <div
-            className="main-slider-two__bg"
-            style={{
-              backgroundImage: "url(assets/images/backgrounds/slider-2-2.jpg)",
-            }}
-          ></div>
+    className="main-slider-two__bg"
+    style={{
+      backgroundImage: "url(assets/images/backgrounds/slider-2-2.jpg)",
+    }}
+    />
           {/* /.slider-one__bg */}
           <div
             className="main-slider-two__shape-1 float-bob-y"
@@ -98,7 +98,7 @@ export const HomeSlider2 = () => {
               </div>
               <div className="main-slider-two__video-link">
                 <a
-                  href="https://www.youtube.com/watch?v=Get7rqXYrbQ"
+                  href="https://www.youtube.com/watch?v=oUxrU6EFOlg"
                   className="video-popup"
                 >
                   <div className="main-slider-two__video-icon">
@@ -112,11 +112,11 @@ export const HomeSlider2 = () => {
         </SwiperSlide>
         <SwiperSlide className="item main-slider-two__slide-3">
           <div
-            className="main-slider-two__bg"
-            style={{
-              backgroundImage: "url(assets/images/backgrounds/slider-2-1.webp)",
-            }}
-          ></div>
+    className="main-slider-two__bg"
+    style={{
+      backgroundImage: "url(assets/images/backgrounds/slider-2-1.webp)",
+    }}
+    />
           {/* /.slider-one__bg */}
           <div
             className="main-slider-two__shape-1 float-bob-y"
@@ -147,7 +147,7 @@ export const HomeSlider2 = () => {
               </div>
               <div className="main-slider-two__video-link">
                 <a
-                  href="https://www.youtube.com/watch?v=Get7rqXYrbQ"
+                  href="https://www.youtube.com/watch?v=oUxrU6EFOlg"
                   className="video-popup"
                 >
                   <div className="main-slider-two__video-icon">

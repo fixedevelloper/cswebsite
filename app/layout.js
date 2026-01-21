@@ -18,7 +18,22 @@ import '@css/futxo.css';
 import '@css/futxo-responsive.css';
 import "./globals.css";
 import PreLoader from '@/Layout/PreLoader';
+import { Manrope, Syne } from "next/font/google";
+import React from "react";
 
+const manrope = Manrope({
+  subsets: ["latin"],
+  weight: ["200","300","400","500","600","700","800"],
+  display: "swap",
+  variable: "--font-manrope",
+});
+
+const syne = Syne({
+  subsets: ["latin"],
+  weight: ["400","500","600","700","800"],
+  display: "swap",
+  variable: "--font-syne",
+});
 export const metadata = {
   title: {
     template: "%s || Creativ Solutions || Création de sites web & applications",
@@ -31,7 +46,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className={`${manrope.variable} ${syne.variable}`}>
         <PreLoader />
         {children}
       </body>
