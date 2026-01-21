@@ -1,3 +1,4 @@
+
 import React from "react";
 import '@vendors/bootstrap/css/bootstrap.min.css';
 import '@vendors/animate/animate.min.css';
@@ -19,6 +20,7 @@ import '@css/futxo.css';
 import '@css/futxo-responsive.css';
 import "./globals.css";
 import PreLoader from '@/Layout/PreLoader';
+import AnalyticsTracker from "../Layout/AnalyticsTracker";
 
 
 const manrope = Manrope({
@@ -43,10 +45,26 @@ export const metadata = {
   description: "Agence digitale spécialisée en création de sites web, e-commerce et applications mobiles au Cameroun.",
 };
 
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${manrope.variable} ${syne.variable}`}>
+      <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+      ></script>
+      <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', { page_path: window.location.pathname });
+            `,
+          }}
+      />
+      <AnalyticsTracker />
         <PreLoader />
         {children}
       </body>
