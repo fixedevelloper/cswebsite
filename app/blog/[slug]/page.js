@@ -165,9 +165,11 @@ const BlogDetailPage = async ({ params }) => {
                   {/* AUTEUR */}
                   <div className="author">
                     <div className="author__img">
-                      <img
-                          src={post.user?.avatar || "/assets/images/blog/author-img.jpg"}
+                      <Image
+                          src={post.user?.avatar || "/assets/images/blog/author-img.png"}
                           alt={post.user?.name}
+                          width={40}
+                          height={40}
                       />
                     </div>
 
@@ -206,15 +208,17 @@ const BlogDetailPage = async ({ params }) => {
                     {post.comments?.map(comment => (
                         <div className="comment-one__single" key={comment.id}>
                           <div className="comment-one__image">
-                            <img
+                            <Image
                                 src="/assets/images/blog/comment-avatar.png"
                                 alt={comment.name}
+                                width={100}
+                                height={100}
                             />
                           </div>
 
                           <div className="comment-one__content">
                             <h3>{comment.name}</h3>
-                            <p>{comment.message}</p>
+                            <p>{comment.comment}</p>
                             <span>{comment.created_at}</span>
                           </div>
                         </div>

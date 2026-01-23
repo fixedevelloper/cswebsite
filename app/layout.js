@@ -48,8 +48,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${manrope.variable} ${syne.variable}`}>
+    <html lang="fr">
+    <head>
+      <meta name="robots" content="index, follow" />
+      {/* Google Analytics */}
       <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
@@ -64,6 +66,9 @@ export default function RootLayout({ children }) {
             `,
           }}
       />
+    </head>
+    <body className={`${manrope.variable} ${syne.variable}`}>
+
       <AnalyticsTracker />
         <PreLoader />
         {children}

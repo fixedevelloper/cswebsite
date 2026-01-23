@@ -4,6 +4,7 @@ import { Portfolio2 } from "@/components/Portfolio";
 import Process from "@/components/Process";
 import { VideoSection2 } from "@/components/VideoSection";
 import FutxoLayout from "@/Layout/FutxoLayout";
+import React from "react";
 export const metadata = {
     title: "À propos de CreativSolutions - Agence Web au Cameroun",
     description:

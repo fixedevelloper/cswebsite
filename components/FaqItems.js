@@ -1,13 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { Accordion } from "react-bootstrap";
 
 
 export const FaqItems = ({ className = "faq-one__right" }) => {
-  const [activeKey, setActiveKey] = useState(0);
+  const [activeKey, setActiveKey] = useState(null);
 
-  // Questions/Réponses SEO-friendly pour CreativSolutions au Cameroun
   const datas = [
     {
       title: "Quels services digitaux offre CreativSolutions au Cameroun ?",
@@ -36,38 +34,54 @@ export const FaqItems = ({ className = "faq-one__right" }) => {
     },
   ];
 
+  const toggle = (index) => {
+    setActiveKey(activeKey === index ? null : index);
+  };
+
   return (
-      <div className={`${className}`}>
-        <Accordion className="accrodion-grp faq-one-accrodion" defaultActiveKey={"col-0"}>
-          {datas.map((data, i) => (
+      <div className={`${className} faq-one-accrodion`}>
+        {datas.map((data, i) => {
+          const isActive = activeKey === i;
+          return (
               <div
-                  className={`accrodion ${activeKey === i ? "active" : ""}`}
+                  className={`faq-item ${isActive ? "active" : ""} mb-3 border rounded`}
                   key={i}
                   itemScope
                   itemType="https://schema.org/Question"
               >
-                <div className="accrodion-title" itemProp="name">
-                  <Accordion.Toggle
-                      as={"h4"}
-                      eventKey={`col-${i}`}
-                      onClick={() => setActiveKey(i)}
-                  >
-                    {data.title}
-                  </Accordion.Toggle>
+                <div
+                    className={`faq-title bg-transparent ${isActive ? "text-danger" : "text-dark"} px-4 py-3 rounded-top d-flex justify-content-between align-items-center`}
+                    itemProp="name"
+                    onClick={() => toggle(i)}
+                    style={{ cursor: 'pointer' }}
+                >
+                  <span className={`${isActive ? "text-danger" : "text-dark"}`}>{data.title}</span>
+                  <span className="faq-icon" style={{ transform: isActive ? "rotate(45deg)" : "rotate(0deg)", transition: "0.3s" }}>+</span>
                 </div>
-                <Accordion.Collapse eventKey={`col-${i}`} className="accrodion-content">
-                  <div className="pt-2" itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
-                    <div className="inner" itemProp="text">
-                      <p>{data.content}</p>
-                    </div>
+
+                <div
+                    className={`faq-content px-4 py-3 bg-light transition-all overflow-hidden`}
+                    itemProp="acceptedAnswer"
+                    itemScope
+                    itemType="https://schema.org/Answer"
+                    style={{
+                      maxHeight: isActive ? "500px" : "0",
+                      opacity: isActive ? 1 : 0,
+                      transition: "all 0.4s ease",
+                    }}
+                >
+                  <div className="inner" itemProp="text">
+                    <p className="m-0">{data.content}</p>
                   </div>
-                </Accordion.Collapse>
+                </div>
               </div>
-          ))}
-        </Accordion>
+          );
+        })}
       </div>
   );
 };
+
+
 
 
 export default FaqItems;

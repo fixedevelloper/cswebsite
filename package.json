@@ -12,6 +12,7 @@
     "circletype": "^2.3.0",
     "html-react-parser": "^5.2.11",
     "next": "16.1.1",
+    "quill": "^2.0.3",
     "react": "19.2.3",
     "react-bootstrap": "^1.6.1",
     "react-countup": "^6.5.3",
