@@ -3,6 +3,7 @@
     "paths": {
       "@/*": ["./*"],
       "@css/*": ["./public/assets/css/*"],
+      "@fonts/*": ["./public/assets/fonts/*"],
       "@vendors/*": ["./public/assets/vendors/*"]
     }
   }

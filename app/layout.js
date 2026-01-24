@@ -21,7 +21,7 @@ import '@css/futxo-responsive.css';
 import "./globals.css";
 import PreLoader from '@/Layout/PreLoader';
 import AnalyticsTracker from "../Layout/AnalyticsTracker";
-
+import Script from 'next/script';
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -53,30 +53,39 @@ export default function RootLayout({ children }) {
       <meta name="robots" content="index, follow" />
       <link
           rel="preload"
-          href="/media/fa-solid-900.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
+          as="image"
+          href="/assets/images/shapes/main-slider-two-shape-1.webp"
+          fetchPriority="high"
       />
 
       {/* Google Analytics */}
-      <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
-      ></script>
-      <script
-          dangerouslySetInnerHTML={{
-            __html: `
+
+    </head>
+    <body className={`${manrope.variable} ${syne.variable}`}>
+    <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+        strategy="afterInteractive"
+    ></Script>
+{/*    <script
+        dangerouslySetInnerHTML={{
+          __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', { page_path: window.location.pathname });
             `,
-          }}
-      />
-    </head>
-    <body className={`${manrope.variable} ${syne.variable}`}>
-
+        }}
+    />*/}
+    <Script id="gtag-init" strategy="afterInteractive">
+      {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
+              send_page_view: false
+            });
+          `}
+    </Script>
       <AnalyticsTracker />
         <PreLoader />
         {children}
