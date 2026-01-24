@@ -51,6 +51,14 @@ export default function RootLayout({ children }) {
     <html lang="fr">
     <head>
       <meta name="robots" content="index, follow" />
+      <link
+          rel="preload"
+          href="/media/fa-solid-900.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+      />
+
       {/* Google Analytics */}
       <script
           async

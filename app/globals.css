@@ -1,8 +1,4 @@
-@font-face {
-  font-family: "reeyregular";
-  font-display: swap;
-}
-
+/* Font Awesome */
 @font-face {
   font-family: "Font Awesome 6 Free";
   font-display: swap;
@@ -13,9 +9,16 @@
   font-display: swap;
 }
 
+/* Icomoon / Futxo */
 @font-face {
   font-family: "icomoon";
   font-display: swap;
+}
+
+/* Reey font */
+@font-face {
+  font-family: "reey";
+  font-display: optional;
 }
 
 .curved-circle {

@@ -58,7 +58,7 @@ export default function RichTextEditor({ value, onChange, post_id }) {
                             ['link', 'image'],
                             ['clean'],
                             ['code-block'],
-                            ['code'], // HTML editor
+                            ['code'],[{size: 'small'}]
                         ],
                         handlers: {
                             image: handleImageUpload,
