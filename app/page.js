@@ -8,7 +8,6 @@ import { Services2 } from "@/components/Services";
 import { VideoSection2 } from "@/components/VideoSection";
 import FutxoLayout from "@/Layout/FutxoLayout";
 import React from "react";
-import {Solution} from "../components/Solution";
 
 
 export const metadata = {
