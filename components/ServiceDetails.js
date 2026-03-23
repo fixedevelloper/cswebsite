@@ -1,8 +1,7 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Tab, Nav } from "react-bootstrap";
 
 const ServiceDetails = ({
                             thumbnail,
@@ -14,6 +13,8 @@ const ServiceDetails = ({
                             documents = [],
                             support,
                         }) => {
+    const [activeTab, setActiveTab] = useState(tabs[0]?.key || "1");
+
     return (
         <section className="services-details">
             <div className="container">
@@ -27,54 +28,59 @@ const ServiceDetails = ({
                                     alt={title}
                                     width={1200}
                                     height={500}
-                                    unoptimized={true} // si image locale ou externe
+                                    unoptimized={true}
                                 />
                             </div>
                             <h3 className="services-details__title-1">{title}</h3>
                             {description && <p className="services-details__text-1">{description}</p>}
 
-                            {/* Tabs dynamiques */}
+                            {/* Custom Tabs */}
                             {tabs.length > 0 && (
                                 <div className="services-details__tab tabs-box">
-                                    <Tab.Container defaultActiveKey={tabs[0].key}>
-                                        <Nav as="ul" className="tab-buttons clearfix list-unstyled">
-                                            {tabs.map((tab) => (
-                                                <Nav.Link key={tab.key} as="li" eventKey={tab.key} className="tab-btn">
-                                                    <span>{tab.title}</span>
-                                                </Nav.Link>
-                                            ))}
-                                        </Nav>
-                                        <Tab.Content className="tabs-content">
-                                            {tabs.map((tab) => (
-                                                <Tab.Pane className="tab" eventKey={tab.key} key={tab.key}>
-                                                    <div className="services-details__tab-content-inner">
-                                                        <p className="services-details__text-5">{tab.content}</p>
-                                                        {tab.points && (
-                                                            <ul className="services-details__points-two list-unstyled">
-                                                                {tab.points.map((p, i) => (
-                                                                    <li key={i}>
-                                                                        <div className="services-details__points-two-shape" />
-                                                                        <p className="services-details__points-two-text">{p.text}</p>
-                                                                    </li>
-                                                                ))}
-                                                            </ul>
-                                                        )}
-                                                        {tab.image && (
-                                                            <div className="services-details__points-img">
-                                                                <Image
-                                                                    src={tab.image}
-                                                                    alt={title}
-                                                                    width={600}
-                                                                    height={400}
-                                                                    unoptimized={true}
-                                                                />
-                                                            </div>
-                                                        )}
-                                                    </div>
-                                                </Tab.Pane>
-                                            ))}
-                                        </Tab.Content>
-                                    </Tab.Container>
+                                    <ul className="tab-buttons clearfix list-unstyled">
+                                        {tabs.map((tab) => (
+                                            <li
+                                                key={tab.key}
+                                                className={`tab-btn ${activeTab === tab.key ? 'active' : ''}`}
+                                                onClick={() => setActiveTab(tab.key)}
+                                            >
+                                                <span>{tab.title}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    <div className="tabs-content">
+                                        {tabs.map((tab) => (
+                                            <div
+                                                key={tab.key}
+                                                className={`tab ${activeTab === tab.key ? 'active' : ''}`}
+                                            >
+                                                <div className="services-details__tab-content-inner">
+                                                    <p className="services-details__text-5">{tab.content}</p>
+                                                    {tab.points && (
+                                                        <ul className="services-details__points-two list-unstyled">
+                                                            {tab.points.map((p, i) => (
+                                                                <li key={i}>
+                                                                    <div className="services-details__points-two-shape" />
+                                                                    <p className="services-details__points-two-text">{p.text}</p>
+                                                                </li>
+                                                            ))}
+                                                        </ul>
+                                                    )}
+                                                    {tab.image && (
+                                                        <div className="services-details__points-img">
+                                                            <Image
+                                                                src={tab.image}
+                                                                alt={title}
+                                                                width={600}
+                                                                height={400}
+                                                                unoptimized={true}
+                                                            />
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
                             )}
                         </div>
@@ -139,6 +145,7 @@ const ServiceDetails = ({
 
                 </div>
             </div>
+
         </section>
     );
 };

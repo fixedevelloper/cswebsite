@@ -8,7 +8,7 @@ export const Services2 = ({ extraClass = "" }) => {
       image: "/assets/images/services/create-website.webp",
       icon: "icon-digital-marketing",
       title: "Création de Sites Web",
-      link: "/website-development",
+      link: "/services/creation-site-web",
       description:
           "Développement de sites web professionnels, responsives et SEO-friendly, adaptés aux besoins des entreprises locales et startups.",
     },
@@ -16,7 +16,7 @@ export const Services2 = ({ extraClass = "" }) => {
       image: "/assets/images/services/e-commerce-service.webp",
       icon: "icon-shopping-cart",
       title: "Sites E-commerce",
-      link: "/ecommerce-development",
+      link: "/services/creation-site-ecommerce",
       description:
           "Conception de boutiques en ligne performantes pour vendre vos produits au Cameroun et à l’international avec sécurité et rapidité.",
     },
@@ -24,7 +24,7 @@ export const Services2 = ({ extraClass = "" }) => {
       image: "/assets/images/services/application-mobile.webp",
       icon: "icon-mobile-app",
       title: "Applications Web & Mobile",
-      link: "/app-development",
+      link: "/services/devellopement-applications-web-mobile",
       description:
           "Développement d’applications web et mobile sur-mesure pour votre entreprise, afin d’améliorer vos services et votre communication.",
     },
@@ -32,7 +32,7 @@ export const Services2 = ({ extraClass = "" }) => {
       image: "/assets/images/services/Graphique-conception-graphique.png",
       icon: "icon-illustration",
       title: "Conception Graphique",
-      link: "/graphic-design",
+      link: "/services/conception-graphique-UI-UX-Design",
       description:
           "Création de designs professionnels pour vos supports digitaux et imprimés. Boostez votre identité visuelle au Cameroun et en Afrique.",
     },
