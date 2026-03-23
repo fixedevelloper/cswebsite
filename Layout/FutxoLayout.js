@@ -5,6 +5,7 @@ import { futxoUtility } from "@/utility";
 import { useEffect } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
+import WhatsAppButton from "../components/WhatsAppButton";
 
 const FutxoLayout = ({ children, header, noHeader, noFooter, singlePage }) => {
   useEffect(() => {
@@ -24,6 +25,7 @@ const FutxoLayout = ({ children, header, noHeader, noFooter, singlePage }) => {
       <a href="#" className="scroll-to-target scroll-to-top">
         <i className="icon-right-arrow" />
       </a>
+        <WhatsAppButton />
     </div>
   );
 };

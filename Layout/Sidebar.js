@@ -1,7 +1,68 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
-import React, { Fragment } from "react";
-import Image from "next/dist/client/legacy/image";
+import Image from "next/image";
+
 const Sidebar = ({ toggle, setToggle }) => {
+  const [form, setForm] = useState({
+    phone: "",
+    name: "",
+    email: "",
+    message: "",
+    website: "", // honeypot
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState("");
+
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Honeypot anti-bot
+    if (form.website) return;
+
+    setLoading(true);
+    setResult("");
+
+    try {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/devis`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          project_type: "Sidebar",
+          description: form.message,
+          website: "", // important pour backend
+        }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        setResult("✅ Demande envoyée avec succès !");
+        setForm({ name: "", email: "", message: "", website: "" });
+      } else {
+        setResult("❌ Une erreur est survenue.");
+      }
+    } catch (error) {
+      setResult("❌ Erreur réseau.");
+    }
+
+    setLoading(false);
+  };
+
   return (
       <>
         <div
@@ -13,6 +74,7 @@ const Sidebar = ({ toggle, setToggle }) => {
               className="xs-overlay xs-bg-black"
               onClick={() => setToggle(false)}
           />
+
           <div className="xs-sidebar-widget">
             <div className="sidebar-widget-container">
               <div className="widget-heading">
@@ -48,25 +110,35 @@ const Sidebar = ({ toggle, setToggle }) => {
                       <p>
                         Creativ Solutions est une agence digitale spécialisée dans
                         la création de sites web, d’applications et le marketing
-                        digital pour accompagner les entreprises dans leur
-                        transformation numérique.
+                        digital pour accompagner les entreprises.
                       </p>
                     </div>
 
-                    {/* FORMULAIRE DE DEVIS */}
+                    {/* FORMULAIRE */}
                     <div className="form-inner">
                       <h4>Demander un devis gratuit</h4>
 
                       <form
-                          action="assets/inc/sendemail.php"
                           className="contact-form-validated"
                           noValidate
+                          onSubmit={handleSubmit}
                       >
+                        {/* Honeypot */}
+                        <input
+                            type="text"
+                            name="website"
+                            value={form.website}
+                            onChange={handleChange}
+                            style={{ display: "none" }}
+                        />
+
                         <div className="form-group">
                           <input
                               type="text"
                               name="name"
                               placeholder="Votre nom"
+                              value={form.name}
+                              onChange={handleChange}
                               required
                           />
                         </div>
@@ -76,14 +148,27 @@ const Sidebar = ({ toggle, setToggle }) => {
                               type="email"
                               name="email"
                               placeholder="Adresse email"
+                              value={form.email}
+                              onChange={handleChange}
                               required
                           />
                         </div>
-
+                        <div className="form-group">
+                          <input
+                              type="text"
+                              name="phone"
+                              placeholder="Votre telephone"
+                              value={form.phone}
+                              onChange={handleChange}
+                              required
+                          />
+                        </div>
                         <div className="form-group">
                         <textarea
                             name="message"
                             placeholder="Votre message..."
+                            value={form.message}
+                            onChange={handleChange}
                         />
                         </div>
 
@@ -91,8 +176,9 @@ const Sidebar = ({ toggle, setToggle }) => {
                           <button
                               type="submit"
                               className="thm-btn form-inner__btn"
+                              disabled={loading}
                           >
-                            Envoyer la demande
+                            {loading ? "Envoi..." : "Envoyer la demande"}
                             <span />
                             <span />
                             <span />
@@ -102,7 +188,11 @@ const Sidebar = ({ toggle, setToggle }) => {
                         </div>
                       </form>
 
-                      <div className="result" />
+                      {/* RESULT */}
+                      <div className="result">
+                        {result && <p>{result}</p>}
+                      </div>
+
                     </div>
 
                   </div>

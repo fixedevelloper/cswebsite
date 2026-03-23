@@ -4,7 +4,7 @@ import React, { Fragment, useState } from "react";
 import SearchPopup from "./SearchPopup";
 import Sidebar from "./Sidebar";
 import Image from "next/image";
-
+import { FaFacebookF, FaPinterestP,FaTwitter,FaInstagram } from "react-icons/fa";
 const Header = ({ header, singlePage }) => {
   const HeaderComponent = HeaderMenu;
   return <HeaderComponent singlePage={singlePage} />;
@@ -66,10 +66,10 @@ const HeaderMenu = ({ singlePage }) => {
                       <div className="main-menu-two__top-social-box">
                         <p className="main-menu-two__top-social-title">Suivez-nous :</p>
                         <div className="main-menu-two__top-social">
-                          <a href="#"><i className="fab fa-twitter" /></a>
-                          <a href="#"><i className="fab fa-facebook" /></a>
-                          <a href="#"><i className="fab fa-pinterest-p" /></a>
-                          <a href="#"><i className="fab fa-instagram" /></a>
+                          <a href="#"><FaTwitter size={20} /></a>
+                          <a href="#"><FaFacebookF size={20} /></a>
+                          <a href="#"><FaPinterestP size={20} /></a>
+                          <a href="#"><FaInstagram size={20} /></a>
                         </div>
                       </div>
                     </div>
@@ -424,9 +424,10 @@ const MobileMenu = ({ mobileMenuToggle, setMobileMenuToggle }) => {
 
           <div className="mobile-nav__top">
             <div className="mobile-nav__social">
-              <a href="#" aria-label="Twitter" className="fab fa-twitter" />
-              <a href="#" aria-label="Facebook" className="fab fa-facebook-square" />
-              <a href="#" aria-label="Instagram" className="fab fa-instagram" />
+              <a href="#"><FaTwitter size={20} /></a>
+              <a href="#"><FaFacebookF size={20} /></a>
+              <a href="#"><FaPinterestP size={20} /></a>
+              <a href="#"><FaInstagram size={20} /></a>
             </div>
           </div>
         </div>

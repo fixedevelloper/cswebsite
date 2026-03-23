@@ -5,20 +5,38 @@
 }
 
 @font-face {
-  font-family: "Font Awesome 6 Brands";
+  font-family: "Font Awesome 5 Brands";
   font-display: swap;
 }
-
-/* Icomoon / Futxo */
+@font-face {
+  font-family: "icomoon";
+  src: url("/assets/fonts/icomoon.woff") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "reey";
+  src: url("/assets/fonts/reey-regular-webfont.woff2") format("woff2");
+  font-display: optional;
+}
+/*
+!* Icomoon / Futxo *!
 @font-face {
   font-family: "icomoon";
   font-display: swap;
 }
 
-/* Reey font */
+!* Reey font *!
 @font-face {
   font-family: "reey";
   font-display: optional;
+}*/
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  src: url("/assets/fonts/fa-solid-900.woff2") format("woff2"),
+  url("/assets/fonts/fa-solid-400.woff2") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
 }
 
 .curved-circle {
