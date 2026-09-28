@@ -22,6 +22,7 @@ import "./globals.css";
 import PreLoader from '@/Layout/PreLoader';
 import AnalyticsTracker from "../Layout/AnalyticsTracker";
 import Script from 'next/script';
+import { SITE_URL } from "@/utility/site";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -37,6 +38,10 @@ const syne = Syne({
   variable: "--font-syne",
 });
 export const metadata = {
+  metadataBase: new URL(SITE_URL),
+  alternates: {
+    canonical: "./",
+  },
   title: {
     template: "%s || Creativ Solutions || Création de sites web & applications",
     default: "Création de sites web & applications | Creativ Solutions",

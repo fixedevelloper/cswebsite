@@ -24,7 +24,7 @@ export const Services2 = ({ extraClass = "" }) => {
       image: "/assets/images/services/application-mobile.webp",
       icon: "icon-mobile-app",
       title: "Applications Web & Mobile",
-      link: "/services/devellopement-applications-web-mobile",
+      link: "/services/developpement-applications-web-mobile",
       description:
           "Développement d’applications web et mobile sur-mesure pour votre entreprise, afin d’améliorer vos services et votre communication.",
     },
@@ -32,7 +32,7 @@ export const Services2 = ({ extraClass = "" }) => {
       image: "/assets/images/services/Graphique-conception-graphique.png",
       icon: "icon-illustration",
       title: "Conception Graphique",
-      link: "/services/conception-graphique-UI-UX-Design",
+      link: "/services/conception-graphique-ui-ux-design",
       description:
           "Création de designs professionnels pour vos supports digitaux et imprimés. Boostez votre identité visuelle au Cameroun et en Afrique.",
     },
@@ -40,7 +40,7 @@ export const Services2 = ({ extraClass = "" }) => {
       image: "/assets/images/services/webdesign.jpg",
       icon: "icon-ux-design",
       title: "UI/UX Design",
-      link: "/ui-ux-designing",
+      link: "/services/conception-graphique-ui-ux-design",
       description:
           "Conception d’interfaces web et mobile ergonomiques et attractives. Optimisez l’expérience utilisateur pour augmenter vos conversions.",
     },
@@ -48,7 +48,7 @@ export const Services2 = ({ extraClass = "" }) => {
       image: "/assets/images/services/digital-marketing.png",
       icon: "icon-social-media",
       title: "Marketing Digital",
-      link: "/digital-marketing",
+      link: "/services",
       description:
           "Stratégies digitales efficaces incluant réseaux sociaux, SEO et publicité ciblée pour développer votre présence en ligne au Cameroun et en Afrique.",
     },

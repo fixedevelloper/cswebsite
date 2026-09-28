@@ -1,57 +1,61 @@
-import React from "react";
+import { SITE_URL } from "@/utility/site";
+
 export const revalidate = 3600; // Regénération toutes les 1h
 
-// app/sitemap.js
-export default async function sitemap() {
-    const baseUrl = "https://cscreativ.com";
+// Récupère tous les articles en parcourant la pagination de l'API
+async function fetchAllPosts() {
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+    if (!apiUrl) return [];
 
-    let postUrls = [];
+    const posts = [];
+    let page = 1;
+    let lastPage = 1;
 
-    try {
-        // Récupère les posts depuis l'API
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts`, {
+    do {
+        const res = await fetch(`${apiUrl}/api/posts?limit=100&page=${page}`, {
             next: { revalidate: 3600 },
         });
+        if (!res.ok) break;
 
-        if (res.ok) {
-            const posts = await res.json();
+        const json = await res.json();
+        posts.push(...(json.data ?? []));
+        lastPage = json.meta?.last_page ?? 1;
+        page++;
+    } while (page <= lastPage);
 
-            // Filtrer les posts publiés si ton API retourne un champ "published"
-            const publishedPosts = posts.data.filter(post => post.published !== false);
+    return posts;
+}
 
-            postUrls = publishedPosts.map(post => ({
-                url: `${baseUrl}/blog/${post.slug}`,
-                lastModified: post.updated_at ? new Date(post.updated_at).toISOString() : new Date().toISOString(),
-                changeFrequency: "weekly",
-                priority: 0.7,
-            }));
-        }
+export default async function sitemap() {
+    const now = new Date().toISOString();
+
+    let postUrls = [];
+    try {
+        const posts = await fetchAllPosts();
+        postUrls = posts.map(post => ({
+            url: `${SITE_URL}/blog/${post.slug}`,
+            lastModified: post.created_at ? new Date(post.created_at.replace(" ", "T")).toISOString() : now,
+            changeFrequency: "weekly",
+            priority: 0.7,
+        }));
     } catch (error) {
         console.error("Erreur sitemap blog:", error);
     }
 
-    // Pages de services
-    const serviceSlugs = [
-        "creation-site-web",
-        "devellopement-applications-web-mobile",
-        "conception-graphique-ui-ux-design",
-        "creation-site-ecommerce",
-    ];
+    const pages = [
+        { path: "", changeFrequency: "weekly", priority: 1 },
+        { path: "/services", changeFrequency: "monthly", priority: 0.9 },
+        { path: "/services/creation-site-web", changeFrequency: "monthly", priority: 0.8 },
+        { path: "/services/creation-site-ecommerce", changeFrequency: "monthly", priority: 0.8 },
+        { path: "/services/developpement-applications-web-mobile", changeFrequency: "monthly", priority: 0.8 },
+        { path: "/services/conception-graphique-ui-ux-design", changeFrequency: "monthly", priority: 0.8 },
+        { path: "/nos-solutions", changeFrequency: "monthly", priority: 0.7 },
+        { path: "/nos-realisations", changeFrequency: "monthly", priority: 0.7 },
+        { path: "/blog", changeFrequency: "weekly", priority: 0.7 },
+        { path: "/demandez-devis", changeFrequency: "yearly", priority: 0.7 },
+        { path: "/about", changeFrequency: "monthly", priority: 0.6 },
+        { path: "/contact", changeFrequency: "yearly", priority: 0.6 },
+    ].map(({ path, ...rest }) => ({ url: `${SITE_URL}${path}`, lastModified: now, ...rest }));
 
-    const serviceUrls = serviceSlugs.map(slug => ({
-        url: `${baseUrl}/services/${slug}`,
-        lastModified: new Date().toISOString(),
-        changeFrequency: "monthly",
-        priority: 0.8,
-    }));
-
-    // Pages principales
-    const mainPages = [
-        { url: baseUrl, changeFrequency: "weekly", priority: 1 },
-        { url: `${baseUrl}/about`, changeFrequency: "monthly", priority: 0.8 },
-        { url: `${baseUrl}/contact`, changeFrequency: "yearly", priority: 0.6 },
-    ].map(p => ({ ...p, lastModified: new Date().toISOString() }));
-
-    return [...mainPages, ...serviceUrls, ...postUrls];
+    return [...pages, ...postUrls];
 }
-

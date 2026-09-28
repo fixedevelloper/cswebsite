@@ -10,7 +10,7 @@ export const metadata = generateSEO({
     description:
         "Nous créons des sites web professionnels, modernes et performants pour votre entreprise au Cameroun et en Afrique.",
     image: "/assets/images/services/create-website.webp",
-    url: "https://creativsolutions.cm/services/creation-site-web",
+    url: "/services/creation-site-web",
     keywords: ["site web", "agence digitale Cameroun", "SEO", "marketing digital"],
 });
 
@@ -48,17 +48,13 @@ const tabs = [
 ];
 
 const sidebarCategories = [
-    { href: "/services/conception-graphique-UI-UX-Design", text: "UI/UX Designing" },
+    { href: "/services/conception-graphique-ui-ux-design", text: "UI/UX Designing" },
     { href: "/services/creation-site-web", text: "Création de site web" },
     { href: "/services/creation-site-ecommerce", text: "Création de site e-commerce" },
-    { href: "/services/devellopement-applications-web-mobile", text: "Développement d’applications" },
-    { href: "/services/marketing-strategy", text: "Marketing Strategy" },
+    { href: "/services/developpement-applications-web-mobile", text: "Développement d’applications" },
 ];
 
-const documents = [
-    { text: "Télécharger la brochure PDF", href: "/assets/docs/brochure.pdf" },
-    { text: "Télécharger la documentation", href: "/assets/docs/document.docx" },
-];
+const documents = [];
 
 const support = {
     title: "Nous sommes toujours là pour vous aider",

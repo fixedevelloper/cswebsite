@@ -77,8 +77,8 @@ const Footer1 = () => {
                       </div>
                       <div className="text">
                         <p>
-                          <a href="mailto:info@creativsolutions.com">
-                            info@creativsolutions.com
+                          <a href="mailto:info@cscreativ.com">
+                            info@cscreativ.com
                           </a>
                         </p>
                       </div>

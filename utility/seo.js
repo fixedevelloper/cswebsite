@@ -1,4 +1,5 @@
 // utils/seo.js
+import { DEFAULT_OG_IMAGE } from "./site";
 
 /**
  * Génère les métadonnées SEO et OpenGraph pour une page/service
@@ -13,8 +14,8 @@
 export const generateSEO = ({
                                 title,
                                 description,
-                                image = "/assets/images/services/default-og.jpg",
-                                url = "https://creativsolutions.cm",
+                                image = DEFAULT_OG_IMAGE,
+                                url = "/",
                                 keywords = [],
                             }) => {
     return {

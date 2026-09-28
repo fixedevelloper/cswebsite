@@ -1,9 +1,12 @@
+import { SITE_URL } from "@/utility/site";
+
 export default function robots() {
     return {
         rules: {
             userAgent: "*",
             allow: "/",
+            disallow: ["/plkaswer458725lost"],
         },
-        sitemap: "https://cscreativ.com/sitemap.xml",
+        sitemap: `${SITE_URL}/sitemap.xml`,
     };
 }

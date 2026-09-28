@@ -16,7 +16,7 @@ const SolutionIteam = ({solution= {}, className = "col-xl-4 col-lg-4" }) => {
               </div>
               <div className="team-two__title-box">
                 <h4 className="team-two__name">
-                  <Link href="nos-solutions/">{solution.name}</Link>
+                  <Link href="/nos-solutions">{solution.name}</Link>
                 </h4>
                 <p className="team-two__sub-title">{solution.title}</p>
               </div>

@@ -15,11 +15,11 @@ export const metadata = {
         title: "Conception graphique & UI/UX Design | Creativ Solutions",
         description:
             "Boostez l'expérience utilisateur de vos sites et applications avec des interfaces modernes et intuitives, créées par notre équipe de designers.",
-        url: "https://www.creativsolutions.cm/services/ui-ux-designing",
+        url: "/services/conception-graphique-ui-ux-design",
         siteName: "Creativ Solutions",
         images: [
             {
-                url: "https://www.cscreativ.com/assets/images/services/create-website.webp",
+                url: "/assets/images/services/create-website.webp",
                 width: 1200,
                 height: 630,
                 alt: "UI/UX Design Creativ Solutions",
@@ -76,17 +76,13 @@ const tabs = [
 ];
 
 const sidebarCategories = [
-    { href: "/services/conception-graphique-UI-UX-Design", text: "UI/UX Designing" },
+    { href: "/services/conception-graphique-ui-ux-design", text: "UI/UX Designing" },
     { href: "/services/creation-site-web", text: "Création de site web" },
     { href: "/services/creation-site-ecommerce", text: "Création de site e-commerce" },
-    { href: "/services/devellopement-applications-web-mobile", text: "Développement d’applications" },
-    { href: "/services/marketing-strategy", text: "Marketing Strategy" },
+    { href: "/services/developpement-applications-web-mobile", text: "Développement d’applications" },
 ];
 
-const documents = [
-    { text: "Guide UI/UX Design", href: "/documents/guide-uiux.pdf" },
-    { text: "Portfolio de créations graphiques", href: "/documents/portfolio.pdf" },
-];
+const documents = [];
 
 const support = {
     title: "Nous vous accompagnons",
@@ -104,7 +100,7 @@ const page = () => {
             <ServiceDetails
                 thumbnail="/assets/images/services/webdesign.webp"
                 title="Conception graphique & UI/UX Design"
-                activeCategory="conception-graphique-UI-UX-Design"
+                activeCategory="conception-graphique-ui-ux-design"
                 description="Créez des interfaces modernes et intuitives pour vos sites web et applications avec un design centré utilisateur."
                 tabs={tabs}
                 sidebarCategories={sidebarCategories}

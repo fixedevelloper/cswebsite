@@ -92,7 +92,7 @@ export const HomeSlider2 = () => {
                 Des solutions digitales  <br /> qui performent
               </h2>
               <div className="main-slider-two__btn-box">
-                <Link href="nos-services" className="thm-btn main-slider-two__btn">
+                <Link href="/services" className="thm-btn main-slider-two__btn">
                   Découvrir nos services<span />
                   <span /> <span /> <span /> <span />{" "}
                 </Link>

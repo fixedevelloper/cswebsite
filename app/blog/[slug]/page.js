@@ -5,6 +5,8 @@ import CommentForm from "../../../components/CommentForm";
 import React from "react";
 import Image from "next/image";
 import parse from "html-react-parser";
+import sanitize from "@/utility/sanitizeHtml";
+import { SITE_URL } from "@/utility/site";
 
 // 🔹 SEO dynamique par post
 export async function generateMetadata({ params }) {
@@ -24,7 +26,7 @@ export async function generateMetadata({ params }) {
 
   const { post } = await res.json();
 
-  const siteUrl = "https://creativ-solutions.com";
+  const siteUrl = SITE_URL;
   const image =
       post.image_url;
 
@@ -52,7 +54,7 @@ export async function generateMetadata({ params }) {
       locale: "fr_FR",
       type: "article",
       publishedTime: post.created_at,
-      authors: [post.user?.name],
+      authors: [post.author?.name],
     },
 
     twitter: {
@@ -119,7 +121,7 @@ const BlogDetailPage = async ({ params }) => {
                       {post.categories?.map(c => c.name).join(", ")}
                     </li>
                     <li>
-                      <span className="fas fa-user" /> {post.user?.name}
+                      <span className="fas fa-user" /> {post.author?.name}
                     </li>
                     <li>
                       <span className="fas fa-comments" />{" "}
@@ -130,7 +132,7 @@ const BlogDetailPage = async ({ params }) => {
                   <h1 className="blog-details__title-1">{post.title}</h1>
 
                   {/* CONTENU */}
-                  {parse(post.content)}
+                  {parse(sanitize(post.content))}
 
                   {/* TAGS & PARTAGE */}
                   <div className="blog-details__bottom">
@@ -167,14 +169,14 @@ const BlogDetailPage = async ({ params }) => {
                     <div className="author__img">
                       <Image
                           src={post.user?.avatar || "/assets/images/blog/author-img.png"}
-                          alt={post.user?.name}
+                          alt={post.author?.name}
                           width={40}
                           height={40}
                       />
                     </div>
 
                     <div className="author__content">
-                      <h3 className="author__name">{post.user?.name}</h3>
+                      <h3 className="author__name">{post.author?.name}</h3>
                       <p className="author__text">
                         {post.user?.bio || "Auteur de contenus chez Creativ Solutions."}
                       </p>

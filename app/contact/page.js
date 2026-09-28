@@ -69,8 +69,8 @@ const ContactPage = () => {
                       </div>
                       <div className="content">
                         <h3>Email</h3>
-                        <a href="mailto:info@creativsolutions.cm">
-                          info@creativsolutions.cm
+                        <a href="mailto:info@cscreativ.com">
+                          info@cscreativ.com
                         </a>
                       </div>
                     </li>

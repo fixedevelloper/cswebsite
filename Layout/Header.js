@@ -42,8 +42,8 @@ const HeaderMenu = ({ singlePage }) => {
                         <div className="icon"><i className="icon-envelope" /></div>
                         <div className="text">
                           <p>
-                            <a href="mailto:info@creativsolution.com">
-                              info@creativsolution.com
+                            <a href="mailto:info@cscreativ.com">
+                              info@cscreativ.com
                             </a>
                           </p>
                         </div>
@@ -59,7 +59,6 @@ const HeaderMenu = ({ singlePage }) => {
                     <div className="main-menu-two__top-menu-and-social">
                       <ul className="list-unstyled main-menu-two__top-menu">
                         <li><Link href="/about">À propos</Link></li>
-                        <li><Link href="/help">Aide</Link></li>
                         <li><Link href="/contact">Contact</Link></li>
                       </ul>
 
@@ -216,7 +215,7 @@ const Menu = ({ singlePage }) => {
                 </li>
                 <li>
                   <Link
-                      href="/services/devellopement-applications-web-mobile"
+                      href="/services/developpement-applications-web-mobile"
                       title="Développement d’applications web et mobiles"
                   >
                     Développement d’applications web & mobiles
@@ -224,7 +223,7 @@ const Menu = ({ singlePage }) => {
                 </li>
                 <li>
                   <Link
-                      href="/services/conception-graphique-UI-UX-Design"
+                      href="/services/conception-graphique-ui-ux-design"
                       title="Conception graphique et UI UX Design"
                   >
                     Conception graphique & UI/UX Design
@@ -359,7 +358,7 @@ const MobileMenu = ({ mobileMenuToggle, setMobileMenuToggle }) => {
 
                   <li>
                     <Link
-                        href="/services-carousel"
+                        href="/services/creation-site-ecommerce"
                         title="Création de sites e-commerce"
                     >
                       Création de sites e-commerce
@@ -368,7 +367,7 @@ const MobileMenu = ({ mobileMenuToggle, setMobileMenuToggle }) => {
 
                   <li>
                     <Link
-                        href="/website-developement"
+                        href="/services/developpement-applications-web-mobile"
                         title="Développement d’applications web et mobiles"
                     >
                       Applications web & mobiles
@@ -377,7 +376,7 @@ const MobileMenu = ({ mobileMenuToggle, setMobileMenuToggle }) => {
 
                   <li>
                     <Link
-                        href="/ui-ux-designing"
+                        href="/services/conception-graphique-ui-ux-design"
                         title="Conception graphique et UI UX Design"
                     >
                       Conception graphique & UI/UX Design
@@ -386,7 +385,7 @@ const MobileMenu = ({ mobileMenuToggle, setMobileMenuToggle }) => {
 
                   <li>
                     <Link
-                        href="/marketing-strategy"
+                        href="/services"
                         title="Marketing digital et stratégie en ligne"
                     >
                       Marketing digital
@@ -412,8 +411,8 @@ const MobileMenu = ({ mobileMenuToggle, setMobileMenuToggle }) => {
           <ul className="mobile-nav__contact list-unstyled">
             <li>
               <i className="fa fa-envelope" />
-              <a href="mailto:info@creativsolutions.com">
-                info@creativsolutions.com
+              <a href="mailto:info@cscreativ.com">
+                info@cscreativ.com
               </a>
             </li>
             <li>

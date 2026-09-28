@@ -15,11 +15,11 @@ export const metadata = {
         title: "Développement d’application web et mobile | Creativ Solutions",
         description:
             "Notre équipe crée des applications web et mobiles sur mesure, performantes et centrées utilisateur pour maximiser l’engagement et la productivité.",
-        url: "https://www.creativsolutions.cm/services/devellopement-application-web-mobile",
+        url: "/services/developpement-applications-web-mobile",
         siteName: "Creativ Solutions",
         images: [
             {
-                url: "https://www.creativsolutions.cm/assets/images/services/application-mobile.webp",
+                url: "/assets/images/services/application-mobile.webp",
                 width: 1200,
                 height: 630,
                 alt: "Développement d'application Creativ Solutions",
@@ -76,17 +76,13 @@ const tabs = [
 ];
 
 const sidebarCategories = [
-    { href: "/services/conception-graphique-UI-UX-Design", text: "UI/UX Designing" },
+    { href: "/services/conception-graphique-ui-ux-design", text: "UI/UX Designing" },
     { href: "/services/creation-site-web", text: "Création de site web" },
     { href: "/services/creation-site-ecommerce", text: "Création de site e-commerce" },
-    { href: "/services/devellopement-applications-web-mobile", text: "Développement d’applications" },
-    { href: "/services/marketing-strategy", text: "Marketing Strategy" },
+    { href: "/services/developpement-applications-web-mobile", text: "Développement d’applications" },
 ];
 
-const documents = [
-    { text: "Guide Développement d’applications", href: "/documents/guide-app.pdf" },
-    { text: "Portfolio d’applications", href: "/documents/portfolio-app.pdf" },
-];
+const documents = [];
 
 const support = {
     title: "Nous accompagnons vos projets",
@@ -104,7 +100,7 @@ const page = () => {
             <ServiceDetails
                 thumbnail="/assets/images/services/application-mobile.webp"
                 title="Développement d’application web et mobile"
-                activeCategory="devellopement-applications-web-mobile"
+                activeCategory="developpement-applications-web-mobile"
                 description="Développez des applications web et mobiles performantes et sur mesure, adaptées à votre entreprise."
                 tabs={tabs}
                 sidebarCategories={sidebarCategories}

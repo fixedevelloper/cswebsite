@@ -16,11 +16,11 @@ export const metadata = {
         title: "Blog | Creativ Solutions",
         description:
             "Dernières actualités, conseils et astuces digitales pour les entreprises au Cameroun et en Afrique par Creativ Solutions.",
-        url: "https://www.creativsolutions.cm/blog",
+        url: "/blog",
         siteName: "Creativ Solutions",
         images: [
             {
-                url: "https://www.creativsolutions.cm/assets/images/blog-og.jpg",
+                url: "/assets/images/services/create-website.webp",
                 width: 1200,
                 height: 630,
                 alt: "Blog Creativ Solutions",
@@ -34,7 +34,7 @@ export const metadata = {
         title: "Blog | Creativ Solutions",
         description:
             "Dernières actualités, conseils et astuces digitales pour les entreprises au Cameroun et en Afrique par Creativ Solutions.",
-        images: ["https://www.creativsolutions.cm/assets/images/blog-og.jpg"],
+        images: ["/assets/images/services/create-website.webp"],
     },
 };
 

@@ -7,42 +7,42 @@ export const Process = ({ extraClass = "" }) => {
       description:
           "Nous analysons vos besoins pour concevoir une stratégie digitale adaptée à votre entreprise au Cameroun.",
       image: "concepts.jpg",
-      link: "/process/concept",
+      link: "/services",
     },
     {
       title: "Planification",
       description:
           "Planification détaillée du projet, des ressources et des délais pour garantir une livraison efficace.",
       image: "planification.avif",
-      link: "/process/planification",
+      link: "/services",
     },
     {
       title: "Design",
       description:
           "Création de maquettes et design UX/UI optimisé pour une expérience utilisateur fluide et engageante.",
       image: "design.avif",
-      link: "/process/design",
+      link: "/services",
     },
     {
       title: "Développement",
       description:
           "Développement web ou mobile professionnel avec des technologies modernes et robustes.",
       image: "devellopement.avif",
-      link: "/process/developpement",
+      link: "/services",
     },
     {
       title: "Tests",
       description:
           "Tests complets pour assurer la qualité, la performance et la compatibilité sur tous les supports.",
       image: "tests.webp",
-      link: "/process/tests",
+      link: "/services",
     },
     {
       title: "Lancement",
       description:
           "Mise en production et suivi post-lancement pour garantir la réussite de votre projet digital.",
       image: "lancement.avif",
-      link: "/process/lancement",
+      link: "/services",
     },
   ];
 
