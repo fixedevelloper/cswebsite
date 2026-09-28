@@ -8,17 +8,17 @@ export const FaqItems = ({ className = "faq-one__right" }) => {
 
   const datas = [
     {
-      title: "Quels services digitaux offre CreativSolutions au Cameroun ?",
+      title: "Quels services digitaux offre Creativ Solutions au Cameroun ?",
       content:
-          "CreativSolutions propose la création de sites web professionnels, applications mobiles, design UX/UI, marketing digital et solutions e-commerce adaptées aux entreprises locales au Cameroun et en Afrique.",
+          "Creativ Solutions propose la création de sites web professionnels, applications mobiles, design UX/UI, marketing digital et solutions e-commerce adaptées aux entreprises locales au Cameroun et en Afrique.",
     },
     {
-      title: "Comment CreativSolutions peut améliorer ma présence en ligne ?",
+      title: "Comment Creativ Solutions peut améliorer ma présence en ligne ?",
       content:
           "Nous optimisons votre visibilité digitale grâce à des stratégies SEO locales, campagnes publicitaires ciblées et création de contenus attractifs pour toucher vos clients au Cameroun et dans la région Afrique centrale.",
     },
     {
-      title: "Est-ce que CreativSolutions propose un accompagnement après le lancement ?",
+      title: "Est-ce que Creativ Solutions propose un accompagnement après le lancement ?",
       content:
           "Oui, nous offrons un support continu et des services de maintenance pour garantir que votre site ou application reste performant et sécurisé après sa mise en ligne.",
     },

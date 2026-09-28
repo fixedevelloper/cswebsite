@@ -65,7 +65,7 @@ export const Process = ({ extraClass = "" }) => {
                     <div className="process-one__img-box">
                       <div className="process-one__img">
                         <img
-                            src={`assets/images/resources/${step.image}`}
+                            src={`/assets/images/resources/${step.image}`}
                             alt={`${step.title} - Creativ Solutions Cameroun`}
                             itemProp="image"
                         />
@@ -77,7 +77,7 @@ export const Process = ({ extraClass = "" }) => {
                           className="process-one__shape-1"
                       /*    style={{
                             backgroundImage:
-                                "url(assets/images/shapes/process-one-shape-1.png)",
+                                "url(/assets/images/shapes/process-one-shape-1.png)",
                           }}*/
                       />
                       <h4 className="process-one__title" itemProp="name">

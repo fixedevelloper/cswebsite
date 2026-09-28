@@ -26,7 +26,7 @@ export const Services2 = ({ extraClass = "" }) => {
       title: "Applications Web & Mobile",
       link: "/services/developpement-applications-web-mobile",
       description:
-          "Développement d’applications web et mobile sur-mesure pour votre entreprise, afin d’améliorer vos services et votre communication.",
+          "Développement d’applications web et mobiles sur mesure pour votre entreprise, afin d’améliorer vos services et votre communication.",
     },
     {
       image: "/assets/images/services/Graphique-conception-graphique.png",
@@ -42,7 +42,7 @@ export const Services2 = ({ extraClass = "" }) => {
       title: "UI/UX Design",
       link: "/services/conception-graphique-ui-ux-design",
       description:
-          "Conception d’interfaces web et mobile ergonomiques et attractives. Optimisez l’expérience utilisateur pour augmenter vos conversions.",
+          "Conception d’interfaces web et mobiles ergonomiques et attractives. Optimisez l’expérience utilisateur pour augmenter vos conversions.",
     },
     {
       image: "/assets/images/services/digital-marketing.png",
@@ -65,7 +65,7 @@ export const Services2 = ({ extraClass = "" }) => {
         <div
             className="services-two__shape-2 float-bob-y"
             style={{
-              backgroundImage: "url(assets/images/shapes/services-two-shape-2.jpg)",
+              backgroundImage: "url(/assets/images/shapes/services-two-shape-2.jpg)",
             }}
         />
         <div className="container">

@@ -4,7 +4,9 @@ import { Services2 } from "@/components/Services";
 import FutxoLayout from "@/Layout/FutxoLayout";
 
 export const metadata = {
-  title: "Services",
+  title: "Nos services",
+  description:
+      "Création de sites web et e-commerce, développement d’applications web et mobiles, conception graphique, UI/UX design et marketing digital au Cameroun et en Afrique.",
 };
 
 const page = () => {

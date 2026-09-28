@@ -9,10 +9,12 @@ import WhatsAppButton from "../components/WhatsAppButton";
 
 const FutxoLayout = ({ children, header, noHeader, noFooter, singlePage }) => {
   useEffect(() => {
-    futxoUtility.scrollAnimation();
-    futxoUtility.stickyNav();
-    futxoUtility.scrollBtn();
-    futxoUtility.circleText();
+    const cleanups = [
+      futxoUtility.scrollAnimation(),
+      futxoUtility.stickyNav(),
+      futxoUtility.scrollBtn(),
+    ];
+    return () => cleanups.forEach((cleanup) => cleanup());
   }, []);
 
   return (

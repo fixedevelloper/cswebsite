@@ -4,11 +4,11 @@ import React  from "react";
 import DevisForm from "../../components/DevisForm";
 
 export const metadata = {
-    title: "Demandez un devis gratuit | CSCREATIV – Creativ Solution",
+    title: "Demandez un devis gratuit",
     description:
         "Demandez un devis gratuit pour votre projet digital : site web, application mobile, logiciel métier, fintech ou IA. Réponse rapide sous 24h.",
     keywords:
-        "devis informatique Cameroun, agence IT Douala, devis site web, devis application mobile, Creativ Solution",
+        "devis informatique Cameroun, agence IT Douala, devis site web, devis application mobile, Creativ Solutions",
 };
 
 const DevisPage = () => {

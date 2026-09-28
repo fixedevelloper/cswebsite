@@ -1,18 +1,12 @@
 
 import React from "react";
 import '@vendors/bootstrap/css/bootstrap.min.css';
-import '@vendors/animate/animate.min.css';
+import '@vendors/animate/animate-used.css';
 import '@vendors/animate/custom-animate.css';
 import '@vendors/fontawesome/css/all.min.css';
 import '@vendors/jarallax/jarallax.css';
 import '@vendors/jquery-magnific-popup/jquery.magnific-popup.css';
-import '@vendors/odometer/odometer.min.css';
-import '@vendors/swiper/swiper.min.css';
 import '@vendors/futxo-icons/style.css';
-import '@vendors/owl-carousel/owl.carousel.min.css';
-import '@vendors/owl-carousel/owl.theme.default.min.css';
-import '@vendors/bootstrap-select/css/bootstrap-select.min.css';
-import '@vendors/jquery-ui/jquery-ui.css';
 import '@vendors/reey-font/stylesheet.css';
 import { Manrope, Syne } from "next/font/google";
 // template styles
@@ -21,7 +15,7 @@ import '@css/futxo-responsive.css';
 import "./globals.css";
 import PreLoader from '@/Layout/PreLoader';
 import AnalyticsTracker from "../Layout/AnalyticsTracker";
-import Script from 'next/script';
+import CookieConsent from "@/Layout/CookieConsent";
 import { SITE_URL } from "@/utility/site";
 
 const manrope = Manrope({
@@ -43,7 +37,7 @@ export const metadata = {
     canonical: "./",
   },
   title: {
-    template: "%s || Creativ Solutions || Création de sites web & applications",
+    template: "%s | Creativ Solutions",
     default: "Création de sites web & applications | Creativ Solutions",
     absolute: "",
   },
@@ -53,7 +47,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="fr">
+    <html lang="fr" className={`${manrope.variable} ${syne.variable}`}>
     <head>
       <meta name="robots" content="index, follow" />
       <link
@@ -66,22 +60,8 @@ export default function RootLayout({ children }) {
       {/* Google Analytics */}
 
     </head>
-    <body className={`${manrope.variable} ${syne.variable}`}>
-    <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
-        strategy="afterInteractive"
-    ></Script>
-
-    <Script id="gtag-init" strategy="afterInteractive">
-      {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
-              send_page_view: false
-            });
-          `}
-    </Script>
+    <body>
+    <CookieConsent />
       <AnalyticsTracker />
         <PreLoader />
         {children}

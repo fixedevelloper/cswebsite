@@ -1,13 +1,12 @@
-import Blog from "@/components/Blog";
 import Breadcrumb from "@/components/Breadcrumb";
 import FutxoLayout from "@/Layout/FutxoLayout";
-import React from "react";
+import React, { Suspense } from "react";
 import {Blog2} from "../../components/Blog";
 import BlogPagination from "../../components/BlogPagination";
 
 
 export const metadata = {
-    title: "Blog | Creativ Solutions",
+    title: "Blog",
     description:
         "Dernières actualités, conseils et astuces digitales pour les entreprises au Cameroun et en Afrique par Creativ Solutions.",
     keywords:
@@ -44,7 +43,10 @@ const BlogPage = async () => {
     return (
         <FutxoLayout>
             <Breadcrumb title={"Blog"} />
-            <BlogPagination/>
+            {/* useSearchParams exige une frontière Suspense sur une page statique */}
+            <Suspense fallback={null}>
+                <BlogPagination/>
+            </Suspense>
         </FutxoLayout>
     );
 };

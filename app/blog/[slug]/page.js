@@ -4,34 +4,48 @@ import Link from "next/link";
 import CommentForm from "../../../components/CommentForm";
 import React from "react";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 import parse from "html-react-parser";
 import sanitize from "@/utility/sanitizeHtml";
 import { SITE_URL } from "@/utility/site";
 
 // 🔹 SEO dynamique par post
+// Même URL et même cache pour les métadonnées et la page : une seule requête à l'API
+// Renvoie { status: 404 } si l'article n'existe pas, null si l'API est indisponible
+async function fetchPost(slug) {
+  try {
+    const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/posts/${encodeURIComponent(slug)}?limit=5`,
+        { next: { revalidate: 60 } }
+    );
+    if (res.status === 404) return { status: 404 };
+    if (!res.ok) return null;
+    return await res.json();
+  } catch (error) {
+    console.error("API injoignable:", error.message);
+    return null;
+  }
+}
+
 export async function generateMetadata({ params }) {
   const { slug } = await params;
+  const data = await fetchPost(slug);
 
-  const res = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/api/posts/${slug}`,
-      { cache: "no-store" }
-  );
-
-  if (!res.ok) {
+  if (!data?.post) {
     return {
-      title: "Article introuvable | Creativ Solutions",
+      title: "Article introuvable",
       description: "Cet article n’existe pas ou a été supprimé.",
     };
   }
 
-  const { post } = await res.json();
+  const { post } = data;
 
   const siteUrl = SITE_URL;
   const image =
       post.image_url;
 
   return {
-    title: `${post.title} | Creativ Solutions`,
+    title: post.title,
     description: post.excerpt || post.meta_description || post.title,
 
     alternates: {
@@ -74,23 +88,21 @@ export async function generateMetadata({ params }) {
 const BlogDetailPage = async ({ params }) => {
   const { slug } = await params; // ✅ OBLIGATOIRE
 
-  const res = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/api/posts/${slug}?limit=5`,
-      {
-        next: { revalidate: 60 } // 🔥 revalidation toutes les 60s
-      }
-  );
+  const data = await fetchPost(slug);
 
+  if (data?.status === 404) {
+    notFound();
+  }
 
-  if (!res.ok) {
+  if (!data?.post) {
     return (
         <FutxoLayout>
-          <Breadcrumb title="Article introuvable" />
+          <Breadcrumb title="Article momentanément indisponible" />
         </FutxoLayout>
     );
   }
 
-  const { post, latest_posts, categories } = await res.json();
+  const { post, latest_posts, categories } = data;
   return (
       <FutxoLayout>
         <Breadcrumb title={post?.title} />

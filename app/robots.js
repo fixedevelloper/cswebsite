@@ -5,7 +5,6 @@ export default function robots() {
         rules: {
             userAgent: "*",
             allow: "/",
-            disallow: ["/plkaswer458725lost"],
         },
         sitemap: `${SITE_URL}/sitemap.xml`,
     };

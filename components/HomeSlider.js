@@ -3,6 +3,7 @@
 import { sliderProps } from "@/utility/sliderProps";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 
 export const HomeSlider2 = () => {
@@ -16,7 +17,7 @@ export const HomeSlider2 = () => {
           <div
     className="main-slider-two__bg"
     style={{
-      backgroundImage: "url(assets/images/backgrounds/slider-2-3.jpg)",
+      backgroundImage: "url(/assets/images/backgrounds/slider-2-3.jpg)",
     }}
     />
           {/* /.slider-one__bg */}
@@ -24,13 +25,13 @@ export const HomeSlider2 = () => {
             className="main-slider-two__shape-1 float-bob-y"
             style={{
               backgroundImage:
-                "url(assets/images/shapes/main-slider-two-shape-1.webp)",
+                "url(/assets/images/shapes/main-slider-two-shape-1.webp)",
                 backgroundColor: '#f0f0f0 '/* léger placeholder gris */
             }}
           />
           <div className="main-slider-two__shape-2 img-bounce">
             <img
-              src="assets/images/shapes/main-slider-two-shape-2.png"
+              src="/assets/images/shapes/main-slider-two-shape-2.png"
               alt=""
             />
           </div>
@@ -40,17 +41,17 @@ export const HomeSlider2 = () => {
                 Nous concevons des solutions numériques innovantes, performantes et parfaitement organisées pour<br /> développer votre activité.
               </p>
               <h2 className="main-slider-two__title">
-                Donnez vie à<br />vos idées digitale
+                Donnez vie à<br />vos idées digitales
               </h2>
               <div className="main-slider-two__btn-box">
-                <Link href="demandez-devis" className="thm-btn main-slider-two__btn">
+                <Link href="/demandez-devis" className="thm-btn main-slider-two__btn">
                   Demander un devis<span />
                   <span /> <span /> <span /> <span />{" "}
                 </Link>
               </div>
               <div className="main-slider-two__video-link">
                 <a
-                  href="https://www.youtube.com/watch?v=oUxrU6EFOlgQ"
+                  href="https://www.youtube.com/watch?v=oUxrU6EFOlg"
                   className="video-popup"
                 >
                   <div className="main-slider-two__video-icon">
@@ -66,7 +67,7 @@ export const HomeSlider2 = () => {
           <div
     className="main-slider-two__bg"
     style={{
-      backgroundImage: "url(assets/images/backgrounds/slider-2-2.jpg)",
+      backgroundImage: "url(/assets/images/backgrounds/slider-2-2.jpg)",
     }}
     />
           {/* /.slider-one__bg */}
@@ -74,12 +75,12 @@ export const HomeSlider2 = () => {
             className="main-slider-two__shape-1 float-bob-y"
             style={{
               backgroundImage:
-                "url(assets/images/shapes/main-slider-two-shape-1.jpg)",
+                "url(/assets/images/shapes/main-slider-two-shape-1.jpg)",
             }}
           />
           <div className="main-slider-two__shape-2 img-bounce">
             <img
-              src="assets/images/shapes/main-slider-two-shape-2.png"
+              src="/assets/images/shapes/main-slider-two-shape-2.png"
               alt=""
             />
           </div>
@@ -89,7 +90,7 @@ export const HomeSlider2 = () => {
                 Sites web professionnels, plateformes e-commerce et applications web & mobiles conçus<br /> pour la performance et la croissance.
               </p>
               <h2 className="main-slider-two__title">
-                Des solutions digitales  <br /> qui performent
+                Des solutions digitales <br /> qui performent
               </h2>
               <div className="main-slider-two__btn-box">
                 <Link href="/services" className="thm-btn main-slider-two__btn">
@@ -115,7 +116,7 @@ export const HomeSlider2 = () => {
           <div
     className="main-slider-two__bg"
     style={{
-      backgroundImage: "url(assets/images/backgrounds/slider-2-1.webp)",
+      backgroundImage: "url(/assets/images/backgrounds/slider-2-1.webp)",
     }}
     />
           {/* /.slider-one__bg */}
@@ -123,12 +124,12 @@ export const HomeSlider2 = () => {
             className="main-slider-two__shape-1 float-bob-y"
             style={{
               backgroundImage:
-                "url(assets/images/shapes/main-slider-two-shape-1.jpg)",
+                "url(/assets/images/shapes/main-slider-two-shape-1.jpg)",
             }}
           />
           <div className="main-slider-two__shape-2 img-bounce">
             <img
-              src="assets/images/shapes/main-slider-two-shape-2.png"
+              src="/assets/images/shapes/main-slider-two-shape-2.png"
               alt=""
             />
           </div>
@@ -138,10 +139,10 @@ export const HomeSlider2 = () => {
                 De la stratégie à la réalisation, nous vous accompagnons avec méthode,<br /> créativité et rigueur.
               </p>
               <h2 className="main-slider-two__title">
-                Votre partenaire  <br /> pour réussir en ligne
+                Votre partenaire <br /> pour réussir en ligne
               </h2>
               <div className="main-slider-two__btn-box">
-                <Link href="nos-realisations" className="thm-btn main-slider-two__btn">
+                <Link href="/nos-realisations" className="thm-btn main-slider-two__btn">
                   Voir nos réalisations <span />
                   <span /> <span /> <span /> <span />{" "}
                 </Link>

@@ -10,12 +10,12 @@ const TestimonialItem = ({
           <div className="testimonial-one__single-top-inner">
             <div className="testimonial-one__shape-1">
               <img
-                src="assets/images/shapes/testimonial-one-shape-1.png"
+                src="/assets/images/shapes/testimonial-one-shape-1.png"
                 alt=""
               />
             </div>
             <div className="testimonial-one__quote">
-              <img src="assets/images/icon/icon-quote.png" alt="" />
+              <img src="/assets/images/icon/icon-quote.png" alt="" />
             </div>
             <div className="testimonial-one__ratting">
               <span className="fa fa-star" />

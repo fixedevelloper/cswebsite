@@ -10,7 +10,7 @@ export const VideoSection2 = () => {
                 data-imgposition="50% 0%"
                 style={{
                     backgroundImage:
-                        "url(assets/images/backgrounds/video-two-bg.webp)",
+                        "url(/assets/images/backgrounds/video-two-bg.webp)",
                 }}
                 aria-hidden="true"
             />
@@ -23,7 +23,7 @@ export const VideoSection2 = () => {
                     <div className="video-two__video-link">
                         <div className="video-two__shape-1 float-bob-y">
                             <img
-                                src="assets/images/shapes/video-two-shape-1.png"
+                                src="/assets/images/shapes/video-two-shape-1.png"
                                 alt="Décoration graphique CSCREATIV"
                             />
                         </div>
@@ -31,7 +31,7 @@ export const VideoSection2 = () => {
                         <a
                             href="https://www.youtube.com/watch?v=oUxrU6EFOlg"
                             className="video-popup"
-                            aria-label="Voir la présentation vidéo de Creativ Solution"
+                            aria-label="Voir la présentation vidéo de Creativ Solutions"
                         >
                             <div className="video-two__video-icon">
                                 <span className="fa fa-play" aria-hidden="true" />
@@ -46,7 +46,7 @@ export const VideoSection2 = () => {
                     </h3>
 
                     <p className="video-two__text">
-                        CSCREATIV by Creativ Solution accompagne les entreprises
+                        CSCREATIV, par Creativ Solutions, accompagne les entreprises
                         dans la conception de solutions web, mobiles et métiers
                         performantes et innovantes.
                     </p>

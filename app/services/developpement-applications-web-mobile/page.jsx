@@ -6,7 +6,7 @@ import React from "react";
 
 // 🔹 SEO dynamique
 export const metadata = {
-    title: "Développement d’application web et mobile | Creativ Solutions",
+    title: "Développement d’applications web et mobiles",
     description:
         "Développez des applications web et mobiles performantes et sur mesure pour votre entreprise. Android, iOS et web avec une expérience utilisateur optimale.",
     keywords:
@@ -41,7 +41,7 @@ const tabs = [
             { text: "Applications mobiles Android et iOS natives et hybrides." },
             { text: "Intégration API, paiement, et fonctionnalités avancées." },
         ],
-        image: "/assets/images/services/app-development-points.jpg",
+        image: "/assets/images/services/application-mobile.webp",
     },
     {
         key: "intelligence",
@@ -76,7 +76,7 @@ const tabs = [
 ];
 
 const sidebarCategories = [
-    { href: "/services/conception-graphique-ui-ux-design", text: "UI/UX Designing" },
+    { href: "/services/conception-graphique-ui-ux-design", text: "Conception graphique & UI/UX" },
     { href: "/services/creation-site-web", text: "Création de site web" },
     { href: "/services/creation-site-ecommerce", text: "Création de site e-commerce" },
     { href: "/services/developpement-applications-web-mobile", text: "Développement d’applications" },

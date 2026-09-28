@@ -3,11 +3,11 @@ import FutxoLayout from "@/Layout/FutxoLayout";
 import React  from "react";
 import ContactForm from "../../components/contactForm";
 export const metadata = {
-  title: "Contactez CreativSolutions - Agence Web au Cameroun",
+  title: "Contact - agence web au Cameroun",
   description:
-      "Contactez CreativSolutions pour vos projets web et marketing digital au Cameroun et en Afrique. Obtenez un devis gratuit dès aujourd'hui !",
+      "Contactez Creativ Solutions pour vos projets web et marketing digital au Cameroun et en Afrique. Obtenez un devis gratuit dès aujourd'hui !",
   keywords:
-      "contact CreativSolutions, agence web Cameroun, développement site web, marketing digital Afrique",
+      "contact Creativ Solutions, agence web Cameroun, développement site web, marketing digital Afrique",
 };
 
 
@@ -23,7 +23,7 @@ const ContactPage = () => {
         {/* Google Map */}
         <section className="google-map">
           <iframe
-              title="Carte CreativSolutions - Localisation Cameroun"
+              title="Carte Creativ Solutions - Localisation Cameroun"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7959.153835203109!2d9.749797494974803!3d4.106139833470476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10610e6f37f5cea3%3A0x6892441e45529b2a!2zQmFuZ3XDqSwgRG91YWxh!5e0!3m2!1sfr!2scm!4v1768926004286!5m2!1sfr!2scm"
               className="google-map__one"
               allowFullScreen

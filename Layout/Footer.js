@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
+import NewsletterForm from "@/components/NewsletterForm";
+import { projectData } from "@/utility/projetData";
 
 const Footer = ({ footer }) => {
   switch (footer) {
@@ -89,7 +91,7 @@ const Footer1 = () => {
                       </div>
                       <div className="text">
                         <p>
-                          Fin goudron MBAGUE
+                          Fin goudron Mbangue
                           <br /> Douala, Cameroun
                         </p>
                       </div>
@@ -99,7 +101,7 @@ const Footer1 = () => {
                     <h4 className="footer-widget__open-hour-title">Horaires d'ouverture</h4>
                     <p className="footer-widget__open-hour-text">
                       Lun – Sam : 8h00 à 18h00
-                      <br /> Dimanche : Fermé
+                      <br /> Dimanche : fermé
                     </p>
                   </div>
                 </div>
@@ -115,16 +117,17 @@ const Footer1 = () => {
                     <h3 className="footer-widget__title">Portfolio</h3>
                   </div>
                   <ul className="footer-widget__portfolio-list list-unstyled clearfix">
-                    {Array.from({ length: 6 }).map((_, i) => (
-                        <li key={i}>
+                    {projectData.map((project) => (
+                        <li key={project.id}>
                           <div className="footer-widget__portfolio-img">
-                       {/*     <img
-                                src={`/assets/images/project/footer-widget-portfolio-img-${i + 1}.jpg`}
-                                alt={`Portfolio ${i + 1}`}
-                            />*/}
-                            <a href="#">
-                              <span className="fab fa-instagram" />
-                            </a>
+                            <img
+                                src={`/assets/images/solutions/${project.image}`}
+                                alt={`Projet ${project.title}`}
+                                loading="lazy"
+                            />
+                            <Link href="/nos-realisations" aria-label={`Voir le projet ${project.title}`}>
+                              <span className="fas fa-arrow-right" />
+                            </Link>
                           </div>
                         </li>
                     ))}
@@ -144,26 +147,7 @@ const Footer1 = () => {
                   <p className="footer-widget__contact-text">
                     Abonnez-vous à notre newsletter pour recevoir nos dernières mises à jour et actualités.
                   </p>
-                  <form
-                      className="footer-widget__contact-form mc-form"
-                      data-url="MC_FORM_URL"
-                      noValidate="novalidate"
-                  >
-                    <div className="footer-widget__contact-form-input-box">
-                      <input
-                          type="email"
-                          placeholder="Adresse email"
-                          name="EMAIL"
-                      />
-                      <button
-                          type="submit"
-                          className="footer-widget__contact-btn"
-                      >
-                        <span className="fas fa-paper-plane" />
-                      </button>
-                    </div>
-                  </form>
-                  <div className="mc-form__response" />
+                  <NewsletterForm />
                 </div>
               </div>
 
@@ -176,7 +160,15 @@ const Footer1 = () => {
           <div className="container">
             <div className="site-footer__bottom-inner">
               <p className="site-footer__bottom-text">
-                © {currentYear} Tous droits réservés par <a href="#">creativsolutions.com</a>
+                © {currentYear} Tous droits réservés par <Link href="/">Creativ Solutions</Link>
+                {" · "}
+                <button
+                    type="button"
+                    className="cookie-consent-link"
+                    onClick={() => window.dispatchEvent(new Event("open-cookie-consent"))}
+                >
+                  Cookies
+                </button>
               </p>
             </div>
           </div>

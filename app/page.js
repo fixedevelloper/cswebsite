@@ -21,19 +21,28 @@ export const metadata = {
 // ISR: Rebuild tous les 60 sec
 export const revalidate = 60;
 
-const Homepage = async () => {
-    // ✅ fetch côté serveur
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts?limit=6`, { cache: "no-store" });
-
-    if (!res.ok) {
-        console.error("Erreur API:", res.status, await res.text());
-        return { props: { blogPosts: [] } };
+// Derniers articles ; l'accueil doit s'afficher même si l'API est indisponible
+async function fetchLatestPosts() {
+    try {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts?limit=6`, {
+            next: { revalidate },
+        });
+        if (!res.ok) {
+            console.error("Erreur API:", res.status);
+            return [];
+        }
+        const data = await res.json();
+        return data.data ?? [];
+    } catch (error) {
+        console.error("API injoignable:", error.message);
+        return [];
     }
+}
 
-    const data = await res.json();
+const Homepage = async () => {
+    const posts = await fetchLatestPosts();
 
-
-    const blogPosts = data.data.map((post) => ({
+    const blogPosts = posts.map((post) => ({
         id: post.id,
         title: post.title,
         slug: post.slug,
@@ -62,7 +71,7 @@ const Homepage = async () => {
                     data-imgposition="50% 0%"
                     style={{
                         backgroundImage:
-                            "url(assets/images/backgrounds/meeting-one-bg.webp)",
+                            "url(/assets/images/backgrounds/meeting-one-bg.webp)",
                     }}
                 />
                 <div className="container">
@@ -71,7 +80,7 @@ const Homepage = async () => {
                             <span className="icon-bpm" />
                         </div>
                         <h3 className="meeting-one__title">
-                            CreativSolutions : Des solutions digitales <br />
+                            Creativ Solutions : des solutions digitales <br />
                             pour booster votre entreprise au Cameroun et en Afrique
                         </h3>
                     </div>

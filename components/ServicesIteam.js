@@ -46,7 +46,7 @@ const ServicesIteam = ({
               </p>
 
               <div className="services-two__shape-1">
-                <img src="assets/images/shapes/services-two-shape-1.png" alt="" />
+                <img src="/assets/images/shapes/services-two-shape-1.png" alt="" />
               </div>
             </div>
 

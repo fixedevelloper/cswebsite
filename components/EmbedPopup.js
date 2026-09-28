@@ -1,7 +1,10 @@
 "use client";
 import useClickOutside from "@/utility/useClickOutside";
 import { Fragment, useEffect, useState } from "react";
-import ReactPlayer from "react-player";
+import dynamic from "next/dynamic";
+
+// Chargé uniquement à l'ouverture d'une vidéo, pas sur chaque page
+const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 const EmbedPopup_ = ({ close, videoID }) => {
   const domNode = useClickOutside(() => close(false));
@@ -17,7 +20,7 @@ const EmbedPopup_ = ({ close, videoID }) => {
           <div className="mfp-content" ref={domNode}>
             <div className="mfp-iframe-scaler">
               <button
-                title="Close (Esc)"
+                title="Fermer (Échap)"
                 type="button"
                 className="mfp-close"
                 onClick={close}
@@ -38,7 +41,7 @@ const EmbedPopup_ = ({ close, videoID }) => {
               )}
             </div>
           </div>
-          <div className="mfp-preloader">Loading...</div>
+          <div className="mfp-preloader">Chargement…</div>
         </div>
       </div>
     </Fragment>

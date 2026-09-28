@@ -157,7 +157,7 @@ const Sidebar = ({ toggle, setToggle }) => {
                           <input
                               type="text"
                               name="phone"
-                              placeholder="Votre telephone"
+                              placeholder="Votre téléphone"
                               value={form.phone}
                               onChange={handleChange}
                               required

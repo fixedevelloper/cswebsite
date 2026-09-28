@@ -4,12 +4,12 @@ import ServiceDetails from "@/components/ServiceDetails";
 import {generateSEO} from "../../../utility/seo";
 
 export const metadata = generateSEO({
-    title: "Création de site web professionnel | Creativ Solutions",
+    title: "Création de site e-commerce",
     description:
-        "Nous créons des sites web professionnels, modernes et performants pour votre entreprise au Cameroun et en Afrique.",
+        "Nous créons des boutiques en ligne sécurisées et performantes, avec paiement en ligne et gestion des produits, pour votre entreprise au Cameroun et en Afrique.",
     image: "/assets/images/services/e-commerce-service.webp",
     url: "/services/creation-site-ecommerce",
-    keywords: ["site web", "agence digitale Cameroun", "SEO", "marketing digital"],
+    keywords: ["site e-commerce", "boutique en ligne", "agence digitale Cameroun", "paiement en ligne"],
 });
 const tabs = [
     {
@@ -57,7 +57,7 @@ const tabs = [
 ];
 
 const sidebarCategories = [
-    { href: "/services/conception-graphique-ui-ux-design", text: "UI/UX Designing" },
+    { href: "/services/conception-graphique-ui-ux-design", text: "Conception graphique & UI/UX" },
     { href: "/services/creation-site-web", text: "Création de site web" },
     { href: "/services/creation-site-ecommerce", text: "Création de site e-commerce" },
     { href: "/services/developpement-applications-web-mobile", text: "Développement d’applications" },

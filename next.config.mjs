@@ -22,11 +22,6 @@ const nextConfig = {
                 permanent: true,
             },
             {
-                source: "/services/conception-graphique-UI-UX-Design",
-                destination: "/services/conception-graphique-ui-ux-design",
-                permanent: true,
-            },
-            {
                 source: "/ui-ux-designing",
                 destination: "/services/conception-graphique-ui-ux-design",
                 permanent: true,

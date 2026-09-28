@@ -6,7 +6,7 @@ import React from "react";
 
 // 🔹 SEO dynamique
 export const metadata = {
-    title: "Conception graphique & UI/UX Design | Creativ Solutions",
+    title: "Conception graphique & UI/UX Design",
     description:
         "Créez des interfaces modernes et intuitives pour vos sites web et applications avec un design centré utilisateur. UI/UX Design et conception graphique par Creativ Solutions.",
     keywords:
@@ -76,7 +76,7 @@ const tabs = [
 ];
 
 const sidebarCategories = [
-    { href: "/services/conception-graphique-ui-ux-design", text: "UI/UX Designing" },
+    { href: "/services/conception-graphique-ui-ux-design", text: "Conception graphique & UI/UX" },
     { href: "/services/creation-site-web", text: "Création de site web" },
     { href: "/services/creation-site-ecommerce", text: "Création de site e-commerce" },
     { href: "/services/developpement-applications-web-mobile", text: "Développement d’applications" },

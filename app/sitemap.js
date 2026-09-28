@@ -19,7 +19,9 @@ async function fetchAllPosts() {
 
         const json = await res.json();
         posts.push(...(json.data ?? []));
-        lastPage = json.meta?.last_page ?? 1;
+        // Anciennes versions de l'API : last_page renvoyé en double sous forme de tableau
+        const apiLastPage = json.meta?.last_page;
+        lastPage = (Array.isArray(apiLastPage) ? apiLastPage[0] : apiLastPage) ?? 1;
         page++;
     } while (page <= lastPage);
 

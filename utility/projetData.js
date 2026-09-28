@@ -6,7 +6,7 @@ export const   projectData = [
         title: "LEC",
         description:
             "Site e-commerce développé pour LEC au Cameroun, optimisé pour la conversion et l’expérience utilisateur.",
-        detailLink: "/portfolio-details/lec",
+        detailLink: null, // pas encore de page de détail pour ce projet
         isActive: true,
     },
     {
@@ -16,7 +16,7 @@ export const   projectData = [
         title: "Saftyplus.fr",
         description:
             "Boutique en ligne conçue pour Safty, incluant gestion des produits et paiement sécurisé.",
-        detailLink: "/portfolio-details/saftyplus",
+        detailLink: null, // pas encore de page de détail pour ce projet
         isActive: true,
     },
     {
@@ -25,28 +25,28 @@ export const   projectData = [
         subTitle: "Développement",
         title: "Oray Conseils",
         description:
-            "Application web sur-mesure pour Oray Conseils, optimisée pour la performance et le SEO local.",
-        detailLink: "/portfolio-details/oray-conseils",
+            "Application web sur mesure pour Oray Conseils, optimisée pour la performance et le SEO local.",
+        detailLink: null, // pas encore de page de détail pour ce projet
         isActive: true,
     },
     {
         id: 4,
         image: "wtc.jpeg",
         subTitle: "Application Mobile",
-        title: "We-transfercah",
+        title: "We-Transfer Cash",
         description:
-            "Application mobile développée pour We-transfercah afin d'améliorer la gestion et l’interaction des utilisateurs.",
-        detailLink: "/portfolio-details/we-transfercah",
+            "Application mobile développée pour We-Transfer Cash afin d'améliorer la gestion et l’interaction des utilisateurs.",
+        detailLink: null, // pas encore de page de détail pour ce projet
         isActive: true,
     },
     {
         id: 5,
-        image: "portfolio-2-4.jpg",
+        image: "eparwin.png",
         subTitle: "Application Mobile",
-        title: "Eparkwin ",
+        title: "Eparkwin",
         description:
-            "Application web et  mobile développée pour creativ solutions afin d'améliorer la gestion et l’interaction des utilisateurs.",
-        detailLink: "/portfolio-details/we-transfercah",
+            "Application web et mobile développée pour Creativ Solutions afin d'améliorer la gestion et l’interaction des utilisateurs.",
+        detailLink: null, // pas encore de page de détail pour ce projet
         isActive: true,
     },
 ];

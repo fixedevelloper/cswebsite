@@ -1,52 +1,37 @@
-import CircleType from "circletype";
+import { initScrollReveal } from "./scrollReveal";
 
+// Chaque fonction renvoie une fonction de nettoyage : FutxoLayout est remonté à chaque page,
+// sans nettoyage les écouteurs de scroll s'accumulaient à chaque navigation.
 export const futxoUtility = {
   scrollAnimation() {
-    if (typeof window !== "undefined") {
-      window.WOW = require("wowjs");
-    }
-    new WOW.WOW().init();
+    return initScrollReveal();
   },
   stickyNav() {
     const header = document.getElementById("header-sticky");
-    if (header) {
-      window.addEventListener("scroll", function () {
-        if (window.scrollY > 250) {
-          header.classList.add("fixed-header");
-        } else {
-          header.classList.remove("fixed-header");
-        }
-      });
-    }
+    if (!header) return () => {};
+
+    const onScroll = () => {
+      header.classList.toggle("fixed-header", window.scrollY > 250);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   },
   scrollBtn() {
-    var scrollBtn = document.querySelector(".scroll-to-target");
-    if (scrollBtn) {
-      scrollBtn.addEventListener("click", function () {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      });
-    }
-    window.addEventListener("scroll", function () {
-      var scrolling = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollBtn = document.querySelector(".scroll-to-target");
+    if (!scrollBtn) return () => {};
 
-      if (scrolling > 500) {
-        document
-          .querySelector(".scroll-to-target")
-          .classList.add("d-inline-block");
-      } else {
-        document
-          .querySelector(".scroll-to-target")
-          .classList.remove("d-inline-block");
-      }
-    });
-  },
-  circleText() {
-    const circle = document.querySelectorAll(".curved-circle");
-    circle.forEach((element) => {
-      new CircleType(element);
-    });
+    const onClick = (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+    const onScroll = () => {
+      scrollBtn.classList.toggle("d-inline-block", window.scrollY > 500);
+    };
+    scrollBtn.addEventListener("click", onClick);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      scrollBtn.removeEventListener("click", onClick);
+      window.removeEventListener("scroll", onScroll);
+    };
   },
 };

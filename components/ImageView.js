@@ -18,7 +18,7 @@ const ImgViews = ({ close, src }) => {
               <img className="mfp-img" src={src} />
             </div>
           </div>
-          <div className="mfp-preloader">Loading...</div>
+          <div className="mfp-preloader">Chargement…</div>
         </div>
       </div>
     </Fragment>
@@ -38,7 +38,7 @@ const ImageView = () => {
 
     const setupImageLinks = () => {
       document
-        .querySelectorAll('a[href*="assets/image"]:not([download])')
+        .querySelectorAll('a[href*="/assets/image"]:not([download])')
         .forEach((a) => {
           a.addEventListener("click", handleImageClick);
         });

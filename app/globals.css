@@ -123,3 +123,80 @@
     flex: auto;
   }
 }
+/* Bandeau de consentement cookies */
+.cookie-consent {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 9999;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  background: var(--futxo-black);
+  color: var(--futxo-white);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+.cookie-consent__text {
+  flex: 1 1 320px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--futxo-white);
+}
+.cookie-consent__actions {
+  display: flex;
+  gap: 10px;
+}
+.cookie-consent__btn {
+  font-family: inherit;
+  padding: 10px 22px;
+  border: 1px solid var(--futxo-base);
+  border-radius: 30px;
+  background: var(--futxo-base);
+  color: var(--futxo-white);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.cookie-consent__btn--secondary {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.cookie-consent-link {
+  background: none;
+  border: 0;
+  padding: 0;
+  color: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Newsletter du footer */
+.newsletter-form__message {
+  margin: 12px 0 0;
+  font-size: 14px;
+}
+.newsletter-form__message--success {
+  color: #4ade80;
+}
+.newsletter-form__message--error {
+  color: #f87171;
+}
+.newsletter-form__consent {
+  margin: 10px 0 0;
+  font-size: 12px;
+  line-height: 1.5;
+  opacity: 0.7;
+}
+
+/* Vignettes des réalisations dans le footer : images de formats différents */
+.footer-widget__portfolio-img img {
+  height: 80px;
+  object-fit: cover;
+}

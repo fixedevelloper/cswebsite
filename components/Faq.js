@@ -20,7 +20,7 @@ export const Faq2 = () => {
                   </span>
                   </div>
                   <h2 className="section-title__title">
-                    CreativSolutions: Plus qu'une agence digitale au Cameroun
+                    Creativ Solutions : plus qu'une agence digitale au Cameroun
                   </h2>
                 </div>
 
@@ -77,16 +77,16 @@ export const Faq2 = () => {
                   <li>
                     <div className="faq-two__img">
                       <img
-                          src="assets/images/resources/lancement.avif"
-                          alt="Exemple de projet CreativSolutions au Cameroun"
+                          src="/assets/images/resources/lancement.avif"
+                          alt="Exemple de projet Creativ Solutions au Cameroun"
                       />
                     </div>
                   </li>
                {/*   <li>
                     <div className="faq-two__img">
                       <img
-                          src="assets/images/resources/faq-two-img-1-2.jpg"
-                          alt="Equipe CreativSolutions au travail sur un projet digital"
+                          src="/assets/images/resources/faq-two-img-1-2.jpg"
+                          alt="Équipe Creativ Solutions au travail sur un projet digital"
                       />
                     </div>
                   </li>*/}

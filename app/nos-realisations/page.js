@@ -1,13 +1,14 @@
-"use client";
 import Breadcrumb from "@/components/Breadcrumb";
 import FutxoLayout from "@/Layout/FutxoLayout";
 import Link from "next/link";
 import {projectData} from "../../utility/projetData";
-import React, {useState} from "react";
+import React from "react";
 
-/*export const metadata = {
-  title: "Nos realisations",
-};*/
+export const metadata = {
+  title: "Nos réalisations",
+  description:
+      "Découvrez les sites web, boutiques en ligne et applications web et mobiles réalisés par Creativ Solutions pour ses clients au Cameroun et en Afrique.",
+};
 
 
 const page = () => {
@@ -51,9 +52,11 @@ const page = () => {
                                                     {item.subTitle}
                                                 </p>
                                                 <h4 className="portfolio-two__title" itemProp="name">
-                                                    <Link href={item.detailLink}>
-                                                        {item.title}
-                                                    </Link>
+                                                    {item.detailLink ? (
+                                                        <Link href={item.detailLink}>
+                                                            {item.title}
+                                                        </Link>
+                                                    ) : item.title}
                                                 </h4>
                                                 <p
                                                     className="portfolio-two__description"
@@ -63,14 +66,16 @@ const page = () => {
                                                 </p>
                                             </div>
 
-                                            <div className="portfolio-two__arrow">
-                                                <Link
-                                                    href={item.detailLink}
-                                                    aria-label={`Voir les détails du projet ${item.title}`}
-                                                >
-                                                    <span className="icon-next" />
-                                                </Link>
-                                            </div>
+                                            {item.detailLink && (
+                                                <div className="portfolio-two__arrow">
+                                                    <Link
+                                                        href={item.detailLink}
+                                                        aria-label={`Voir les détails du projet ${item.title}`}
+                                                    >
+                                                        <span className="icon-next" />
+                                                    </Link>
+                                                </div>
+                                            )}
                                         </div>
                                     </div>
                                 </div>

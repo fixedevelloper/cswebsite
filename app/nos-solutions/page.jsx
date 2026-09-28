@@ -6,6 +6,8 @@ import SolutionIteam from "../../components/SolutionIteam";
 
 export const metadata = {
     title: "Nos solutions",
+    description:
+        "Nos solutions logicielles prêtes à l’emploi : gestion d’école, transfert d’argent international, gestion locative et paris communautaires.",
 };
 
 const page = () => {

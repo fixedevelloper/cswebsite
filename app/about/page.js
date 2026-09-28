@@ -6,11 +6,11 @@ import { VideoSection2 } from "@/components/VideoSection";
 import FutxoLayout from "@/Layout/FutxoLayout";
 import React from "react";
 export const metadata = {
-    title: "À propos de CreativSolutions - Agence Web au Cameroun",
+    title: "À propos - agence web au Cameroun",
     description:
-        "Découvrez CreativSolutions, agence spécialisée en création de sites web, applications et marketing digital au Cameroun et en Afrique.",
+        "Découvrez Creativ Solutions, agence spécialisée en création de sites web, applications et marketing digital au Cameroun et en Afrique.",
     keywords:
-        "CreativSolutions, agence web Cameroun, création site web, application mobile, marketing digital Afrique",
+        "Creativ Solutions, agence web Cameroun, création site web, application mobile, marketing digital Afrique",
 };
 
 const AboutPage = () => {
@@ -21,8 +21,8 @@ const AboutPage = () => {
 
             {/* Section About */}
             <AboutUS2
-                title="Découvrez l'univers de CreativSolutions"
-                text1="CreativSolutions est votre partenaire pour des solutions digitales professionnelles adaptées aux entreprises au Cameroun et en Afrique."
+                title="Découvrez l'univers de Creativ Solutions"
+                text1="Creativ Solutions est votre partenaire pour des solutions digitales professionnelles adaptées aux entreprises au Cameroun et en Afrique."
                 text2="Nous combinons expertise, créativité et innovation pour transformer vos idées en projets concrets."
                 points={[
                     { title: "Consultation gratuite", description: "Obtenez un premier diagnostic gratuit pour votre projet." },

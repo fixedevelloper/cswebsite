@@ -6,7 +6,7 @@ import {generateSEO} from "../../../utility/seo";
 import React from "react";
 
 export const metadata = generateSEO({
-    title: "Création de site web professionnel | Creativ Solutions",
+    title: "Création de site web professionnel",
     description:
         "Nous créons des sites web professionnels, modernes et performants pour votre entreprise au Cameroun et en Afrique.",
     image: "/assets/images/services/create-website.webp",
@@ -48,7 +48,7 @@ const tabs = [
 ];
 
 const sidebarCategories = [
-    { href: "/services/conception-graphique-ui-ux-design", text: "UI/UX Designing" },
+    { href: "/services/conception-graphique-ui-ux-design", text: "Conception graphique & UI/UX" },
     { href: "/services/creation-site-web", text: "Création de site web" },
     { href: "/services/creation-site-ecommerce", text: "Création de site e-commerce" },
     { href: "/services/developpement-applications-web-mobile", text: "Développement d’applications" },
@@ -61,7 +61,7 @@ const support = {
     text: "Contactez notre équipe pour toute question ou support technique.",
     btnText: "Envoyer un message",
     btnHref: "/contact",
-    bgImage: "/assets/images/backgrounds/services-details-support-bg.jpg",
+    bgImage: "/assets/images/backgrounds/support-bg.jpg",
 };
 
 const page = () => {

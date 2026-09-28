@@ -51,7 +51,7 @@ const HeaderMenu = ({ singlePage }) => {
                       <li>
                         <div className="icon"><i className="icon-time" /></div>
                         <div className="text">
-                          <p>Horaires : Lun – Ven 8h00 – 18h00</p>
+                          <p>Horaires : Lun – Sam 8h00 – 18h00</p>
                         </div>
                       </li>
                     </ul>

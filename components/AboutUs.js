@@ -13,7 +13,7 @@ export const AboutUS2 = () => {
                 <div className="about-two__img-box">
                   <div className="about-two__img">
                     <img
-                        src="assets/images/resources/about.webp"
+                        src="/assets/images/resources/about.webp"
                         alt="Creativ Solutions – Agence digitale au Cameroun"
                     />
                   </div>
@@ -75,7 +75,7 @@ export const AboutUS2 = () => {
                       <h5>Solutions digitales sur mesure</h5>
                       <p>
                         Web, mobile, SEO, marketing <br />
-                        adaptés à vos objectifs business
+                        adaptées à vos objectifs
                       </p>
                     </div>
                   </li>

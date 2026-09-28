@@ -12,7 +12,7 @@ const SolutionIteam = ({solution= {}, className = "col-xl-4 col-lg-4" }) => {
           <div className="team-two__content-box">
             <div className="team-two__content-box-inner">
               <div className="team-two__shape-1">
-                <img src="assets/images/shapes/team-two-shape-1.png" alt="Solutions digitales professionnelles" />
+                <img src="/assets/images/shapes/team-two-shape-1.png" alt="Solutions digitales professionnelles" />
               </div>
               <div className="team-two__title-box">
                 <h4 className="team-two__name">
