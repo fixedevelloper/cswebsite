@@ -37,27 +37,31 @@ const Sidebar = ({ toggle, setToggle }) => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          // Sans cet en-tête, Laravel répond aux erreurs de validation par une redirection au lieu d'un JSON
+          "Accept": "application/json",
         },
         body: JSON.stringify({
           name: form.name,
           email: form.email,
           phone: form.phone,
-          project_type: "Sidebar",
+          project_type: "Demande rapide (panneau latéral)",
           description: form.message,
           website: "", // important pour backend
         }),
       });
 
-      const data = await res.json();
-
       if (res.ok) {
         setResult("✅ Demande envoyée avec succès !");
-        setForm({ name: "", email: "", message: "", website: "" });
+        setForm({ phone: "", name: "", email: "", message: "", website: "" });
+      } else if (res.status === 429) {
+        setResult("❌ Trop de tentatives. Réessayez plus tard.");
+      } else if (res.status === 422) {
+        setResult("❌ Vérifiez les champs saisis (email valide, téléphone de 20 caractères maximum).");
       } else {
-        setResult("❌ Une erreur est survenue.");
+        setResult("❌ Une erreur est survenue. Veuillez réessayer.");
       }
     } catch (error) {
-      setResult("❌ Erreur réseau.");
+      setResult("❌ Impossible de joindre le serveur. Vérifiez votre connexion.");
     }
 
     setLoading(false);
@@ -157,6 +161,7 @@ const Sidebar = ({ toggle, setToggle }) => {
                           <input
                               type="text"
                               name="phone"
+                              maxLength={20}
                               placeholder="Votre téléphone"
                               value={form.phone}
                               onChange={handleChange}
@@ -169,6 +174,8 @@ const Sidebar = ({ toggle, setToggle }) => {
                             placeholder="Votre message..."
                             value={form.message}
                             onChange={handleChange}
+                            maxLength={5000}
+                            required
                         />
                         </div>
 

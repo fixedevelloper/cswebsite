@@ -31,7 +31,7 @@ const CommentForm = ({ postId }) => {
                 throw new Error(data.message || "Erreur lors de l'envoi du commentaire.");
             }
 
-            setStatus({ type: "success", message: "Votre commentaire a été envoyé avec succès !" });
+            setStatus({ type: "success", message: "Merci ! Votre commentaire a bien été reçu : il sera publié après validation." });
             e.target.reset();
         } catch (err) {
             setStatus({ type: "error", message: err.message });

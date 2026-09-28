@@ -33,19 +33,27 @@ const DevisForm = () => {
                 }
             );
 
-            const result = await res.json();
-
             if (!res.ok) {
                 if (res.status === 429) {
                     throw new Error("Trop de tentatives. Réessayez plus tard.");
                 }
-                throw new Error(result.message || "Erreur lors de l’envoi");
+                if (res.status === 422) {
+                    // Les messages de validation de Laravel sont en anglais : on indique le champ en français
+                    const result = await res.json().catch(() => ({}));
+                    const fields = { name: "nom", email: "adresse e-mail", phone: "téléphone", project_type: "type de projet", budget: "budget", description: "description" };
+                    const invalid = Object.keys(result.errors ?? {}).map(f => fields[f]).filter(Boolean);
+                    throw new Error(invalid.length
+                        ? `Veuillez vérifier : ${invalid.join(", ")}.`
+                        : "Certains champs sont invalides.");
+                }
+                throw new Error("L’envoi a échoué. Veuillez réessayer ou nous contacter par téléphone.");
             }
 
             setMessage("✅ Votre demande de devis a été envoyée avec succès.");
             e.target.reset();
         } catch (error) {
-            setMessage(`❌ ${error.message}`);
+            // Erreur réseau (API injoignable) : message compréhensible plutôt que "Failed to fetch"
+            setMessage(`❌ ${error instanceof TypeError ? "Impossible de joindre le serveur. Vérifiez votre connexion." : error.message}`);
         } finally {
             setLoading(false);
         }
@@ -70,6 +78,7 @@ const DevisForm = () => {
                                 type="text"
                                 name="name"
                                 placeholder="Votre nom"
+                                maxLength={255}
                                 required
                             />
                         </div>
@@ -92,6 +101,7 @@ const DevisForm = () => {
                                 type="text"
                                 name="phone"
                                 placeholder="Téléphone"
+                                maxLength={20}
                                 required
                             />
                         </div>
@@ -124,6 +134,7 @@ const DevisForm = () => {
                 <textarea
                     name="description"
                     placeholder="Décrivez votre projet"
+                    maxLength={5000}
                     required
                 />
                     </div></div>
